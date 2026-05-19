@@ -1,0 +1,227 @@
+{
+  "table": "orders",
+  "description": "Customer orders. Status in order_status column. Date in order_date column.",
+  "total_chunks": 11,
+  "chunks": [
+    {
+      "chunk_id": "tbl_orders_overview",
+      "chunk_type": "table_overview",
+      "entity_type": "table",
+      "table_name": "orders",
+      "text": "TABLE: orders\n\nDESCRIPTION: Customer orders. Status in order_status column. Date in order_date column.\n\nNATURAL_LANGUAGE_TERMS: orders, purchases, transactions, sales, customer orders, order history, placed orders\n\nPRIMARY_KEY: order_id\n\nFOREIGN_KEYS: customer_id \u2192 customers.customer_id\n\nCOLUMNS: order_id, customer_id, order_date, total_amount, payment_method, order_status, shipping_address, shipping_city, shipping_state, shipping_zip\n\nUSE_CASES: Order history, sales by period, order status tracking, revenue totals",
+      "metadata": {
+        "chunk_type": "table_overview",
+        "entity": "table",
+        "table": "orders",
+        "pk": "order_id",
+        "fks": [
+          "customer_id \u2192 customers.customer_id"
+        ],
+        "text": "TABLE: orders\n\nDESCRIPTION: Customer orders. Status in order_status column. Date in order_date column.\n\nNATURAL_LANGUAGE_TERMS: orders, purchases, transactions, sales, customer orders, order history, placed orders\n\nPRIMARY_KEY: order_id\n\nFOREIGN_KEYS: customer_id \u2192 customers.customer_id\n\nCOLUMNS: order_id, customer_id, order_date, total_amount, payment_method, order_status, shipping_address, shipping_city, shipping_state, shipping_zip\n\nUSE_CASES: Order history, sales by period, order status tracking, revenue totals"
+      }
+    },
+    {
+      "chunk_id": "col_orders_order_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "orders",
+      "column_name": "order_id",
+      "text": "COLUMN: orders.order_id\n\nDESCRIPTION: Primary key. Unique order identifier.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: orders",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "orders",
+        "column": "order_id",
+        "type": "INTEGER",
+        "is_pk": true,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: orders.order_id\n\nDESCRIPTION: Primary key. Unique order identifier.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: orders"
+      }
+    },
+    {
+      "chunk_id": "col_orders_customer_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "orders",
+      "column_name": "customer_id",
+      "text": "COLUMN: orders.customer_id\n\nDESCRIPTION: FK \u2192 customers.customer_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: orders",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "orders",
+        "column": "customer_id",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": true,
+        "sample_values": [],
+        "text": "COLUMN: orders.customer_id\n\nDESCRIPTION: FK \u2192 customers.customer_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: orders"
+      }
+    },
+    {
+      "chunk_id": "col_orders_order_date",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "orders",
+      "column_name": "order_date",
+      "text": "COLUMN: orders.order_date\n\nDESCRIPTION: When order was placed. Use this column for date range filters.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: orders",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "orders",
+        "column": "order_date",
+        "type": "TIMESTAMP",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: orders.order_date\n\nDESCRIPTION: When order was placed. Use this column for date range filters.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: orders"
+      }
+    },
+    {
+      "chunk_id": "col_orders_total_amount",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "orders",
+      "column_name": "total_amount",
+      "text": "COLUMN: orders.total_amount\n\nDESCRIPTION: Total order value including all items.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: orders",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "orders",
+        "column": "total_amount",
+        "type": "NUMERIC",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: orders.total_amount\n\nDESCRIPTION: Total order value including all items.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: orders"
+      }
+    },
+    {
+      "chunk_id": "col_orders_payment_method",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "orders",
+      "column_name": "payment_method",
+      "text": "COLUMN: orders.payment_method\n\nDESCRIPTION: Payment method used.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: orders\n\nVALID VALUES: 'Apple Pay', 'Bank Transfer', 'Credit Card', 'Debit Card', 'Google Pay', 'PayPal'",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "orders",
+        "column": "payment_method",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [
+          "Apple Pay",
+          "Bank Transfer",
+          "Credit Card",
+          "Debit Card",
+          "Google Pay",
+          "PayPal"
+        ],
+        "text": "COLUMN: orders.payment_method\n\nDESCRIPTION: Payment method used.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: orders\n\nVALID VALUES: 'Apple Pay', 'Bank Transfer', 'Credit Card', 'Debit Card', 'Google Pay', 'PayPal'"
+      }
+    },
+    {
+      "chunk_id": "col_orders_order_status",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "orders",
+      "column_name": "order_status",
+      "text": "COLUMN: orders.order_status\n\nDESCRIPTION: Current status of the order.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: orders\n\nVALID VALUES: 'Cancelled', 'Delivered', 'Processing', 'Returned', 'Shipped'",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "orders",
+        "column": "order_status",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [
+          "Cancelled",
+          "Delivered",
+          "Processing",
+          "Returned",
+          "Shipped"
+        ],
+        "text": "COLUMN: orders.order_status\n\nDESCRIPTION: Current status of the order.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: orders\n\nVALID VALUES: 'Cancelled', 'Delivered', 'Processing', 'Returned', 'Shipped'"
+      }
+    },
+    {
+      "chunk_id": "col_orders_shipping_address",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "orders",
+      "column_name": "shipping_address",
+      "text": "COLUMN: orders.shipping_address\n\nDESCRIPTION: Street address for delivery.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: orders",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "orders",
+        "column": "shipping_address",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: orders.shipping_address\n\nDESCRIPTION: Street address for delivery.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: orders"
+      }
+    },
+    {
+      "chunk_id": "col_orders_shipping_city",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "orders",
+      "column_name": "shipping_city",
+      "text": "COLUMN: orders.shipping_city\n\nDESCRIPTION: Destination city.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: orders",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "orders",
+        "column": "shipping_city",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: orders.shipping_city\n\nDESCRIPTION: Destination city.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: orders"
+      }
+    },
+    {
+      "chunk_id": "col_orders_shipping_state",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "orders",
+      "column_name": "shipping_state",
+      "text": "COLUMN: orders.shipping_state\n\nDESCRIPTION: Destination state.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: orders",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "orders",
+        "column": "shipping_state",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: orders.shipping_state\n\nDESCRIPTION: Destination state.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: orders"
+      }
+    },
+    {
+      "chunk_id": "col_orders_shipping_zip",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "orders",
+      "column_name": "shipping_zip",
+      "text": "COLUMN: orders.shipping_zip\n\nDESCRIPTION: Destination zip code.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: orders",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "orders",
+        "column": "shipping_zip",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: orders.shipping_zip\n\nDESCRIPTION: Destination zip code.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: orders"
+      }
+    }
+  ]
+}

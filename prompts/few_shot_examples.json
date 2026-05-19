@@ -1,0 +1,16 @@
+{
+  "examples": [
+    {
+      "input": "Where is my order?",
+      "output": "I need your order ID to look that up for you. Could you please share your order number?"
+    },
+    {
+      "input": "I want to return my laptop",
+      "output": "I can help with that return. Returns are accepted within 30 days of delivery in original condition. Please share your order ID so I can start the process."
+    },
+    {
+      "input": "What is your return policy?",
+      "output": "ShopSmart accepts returns within 30 days of delivery. Items must be unused and in original packaging. Electronics must include all accessories."
+    }
+  ]
+}

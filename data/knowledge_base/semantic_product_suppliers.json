@@ -1,0 +1,180 @@
+{
+  "table": "product_suppliers",
+  "description": "Links products to their suppliers with pricing and lead time details.",
+  "total_chunks": 9,
+  "chunks": [
+    {
+      "chunk_id": "tbl_product_suppliers_overview",
+      "chunk_type": "table_overview",
+      "entity_type": "table",
+      "table_name": "product_suppliers",
+      "text": "TABLE: product_suppliers\n\nDESCRIPTION: Links products to their suppliers with pricing and lead time details.\n\nNATURAL_LANGUAGE_TERMS: product suppliers, supplier products, sourcing, procurement, product sourcing\n\nPRIMARY_KEY: product_supplier_id\n\nFOREIGN_KEYS: product_id \u2192 products.product_id, supplier_id \u2192 suppliers.supplier_id\n\nCOLUMNS: product_supplier_id, product_id, supplier_id, cost_price, lead_time_days, minimum_order_quantity, is_primary_supplier, last_order_date\n\nUSE_CASES: Supplier analysis, cost price lookup, primary supplier identification, lead time",
+      "metadata": {
+        "chunk_type": "table_overview",
+        "entity": "table",
+        "table": "product_suppliers",
+        "pk": "product_supplier_id",
+        "fks": [
+          "product_id \u2192 products.product_id",
+          "supplier_id \u2192 suppliers.supplier_id"
+        ],
+        "text": "TABLE: product_suppliers\n\nDESCRIPTION: Links products to their suppliers with pricing and lead time details.\n\nNATURAL_LANGUAGE_TERMS: product suppliers, supplier products, sourcing, procurement, product sourcing\n\nPRIMARY_KEY: product_supplier_id\n\nFOREIGN_KEYS: product_id \u2192 products.product_id, supplier_id \u2192 suppliers.supplier_id\n\nCOLUMNS: product_supplier_id, product_id, supplier_id, cost_price, lead_time_days, minimum_order_quantity, is_primary_supplier, last_order_date\n\nUSE_CASES: Supplier analysis, cost price lookup, primary supplier identification, lead time"
+      }
+    },
+    {
+      "chunk_id": "col_product_suppliers_product_supplier_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "product_suppliers",
+      "column_name": "product_supplier_id",
+      "text": "COLUMN: product_suppliers.product_supplier_id\n\nDESCRIPTION: Primary key.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: product_suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "product_suppliers",
+        "column": "product_supplier_id",
+        "type": "INTEGER",
+        "is_pk": true,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: product_suppliers.product_supplier_id\n\nDESCRIPTION: Primary key.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: product_suppliers"
+      }
+    },
+    {
+      "chunk_id": "col_product_suppliers_product_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "product_suppliers",
+      "column_name": "product_id",
+      "text": "COLUMN: product_suppliers.product_id\n\nDESCRIPTION: FK \u2192 products.product_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: product_suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "product_suppliers",
+        "column": "product_id",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": true,
+        "sample_values": [],
+        "text": "COLUMN: product_suppliers.product_id\n\nDESCRIPTION: FK \u2192 products.product_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: product_suppliers"
+      }
+    },
+    {
+      "chunk_id": "col_product_suppliers_supplier_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "product_suppliers",
+      "column_name": "supplier_id",
+      "text": "COLUMN: product_suppliers.supplier_id\n\nDESCRIPTION: FK \u2192 suppliers.supplier_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: product_suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "product_suppliers",
+        "column": "supplier_id",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": true,
+        "sample_values": [],
+        "text": "COLUMN: product_suppliers.supplier_id\n\nDESCRIPTION: FK \u2192 suppliers.supplier_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: product_suppliers"
+      }
+    },
+    {
+      "chunk_id": "col_product_suppliers_cost_price",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "product_suppliers",
+      "column_name": "cost_price",
+      "text": "COLUMN: product_suppliers.cost_price\n\nDESCRIPTION: Purchase cost from this supplier.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: product_suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "product_suppliers",
+        "column": "cost_price",
+        "type": "NUMERIC",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: product_suppliers.cost_price\n\nDESCRIPTION: Purchase cost from this supplier.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: product_suppliers"
+      }
+    },
+    {
+      "chunk_id": "col_product_suppliers_lead_time_days",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "product_suppliers",
+      "column_name": "lead_time_days",
+      "text": "COLUMN: product_suppliers.lead_time_days\n\nDESCRIPTION: Days from order to delivery.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: product_suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "product_suppliers",
+        "column": "lead_time_days",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: product_suppliers.lead_time_days\n\nDESCRIPTION: Days from order to delivery.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: product_suppliers"
+      }
+    },
+    {
+      "chunk_id": "col_product_suppliers_minimum_order_quantity",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "product_suppliers",
+      "column_name": "minimum_order_quantity",
+      "text": "COLUMN: product_suppliers.minimum_order_quantity\n\nDESCRIPTION: Minimum units per supplier order.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: product_suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "product_suppliers",
+        "column": "minimum_order_quantity",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: product_suppliers.minimum_order_quantity\n\nDESCRIPTION: Minimum units per supplier order.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: product_suppliers"
+      }
+    },
+    {
+      "chunk_id": "col_product_suppliers_is_primary_supplier",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "product_suppliers",
+      "column_name": "is_primary_supplier",
+      "text": "COLUMN: product_suppliers.is_primary_supplier\n\nDESCRIPTION: Whether this is the main supplier for the product.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: product_suppliers\n\nVALID VALUES: 'No', 'Yes'",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "product_suppliers",
+        "column": "is_primary_supplier",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [
+          "No",
+          "Yes"
+        ],
+        "text": "COLUMN: product_suppliers.is_primary_supplier\n\nDESCRIPTION: Whether this is the main supplier for the product.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: product_suppliers\n\nVALID VALUES: 'No', 'Yes'"
+      }
+    },
+    {
+      "chunk_id": "col_product_suppliers_last_order_date",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "product_suppliers",
+      "column_name": "last_order_date",
+      "text": "COLUMN: product_suppliers.last_order_date\n\nDESCRIPTION: Date of last purchase from this supplier.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: product_suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "product_suppliers",
+        "column": "last_order_date",
+        "type": "TIMESTAMP",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: product_suppliers.last_order_date\n\nDESCRIPTION: Date of last purchase from this supplier.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: product_suppliers"
+      }
+    }
+  ]
+}

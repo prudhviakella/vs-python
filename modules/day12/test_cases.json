@@ -1,0 +1,294 @@
+{
+  "test_cases": [
+    {
+      "id": "tc001",
+      "tier": "simple",
+      "description": "Monthly revenue",
+      "queries": [
+        "What is the total revenue last month?",
+        "how much did we make last month",
+        "show me total sales",
+        "whats our revenue",
+        "monthly sales numbers"
+      ],
+      "expect_tables": ["orders"],
+      "expect_columns": ["total_amount", "order_date"],
+      "expect_join_tables": ["order_items", "customers"],
+      "expect_sql_keywords": ["SUM", "total_amount", "order_date", "DATE_TRUNC"]
+    },
+    {
+      "id": "tc002",
+      "tier": "simple",
+      "description": "Payment failure rate",
+      "queries": [
+        "What is the payment failure rate?",
+        "how many payments are failing",
+        "wats failing in payments lol",
+        "payment issues breakdown",
+        "which payments didnt go through"
+      ],
+      "expect_tables": ["payment_transactions"],
+      "expect_columns": ["status", "payment_provider"],
+      "expect_join_tables": ["orders"],
+      "expect_sql_keywords": ["status", "COUNT", "Failed", "payment_provider"]
+    },
+    {
+      "id": "tc003",
+      "tier": "simple",
+      "description": "Active promotions",
+      "queries": [
+        "Show all active promotions with promo codes",
+        "what deals are running now",
+        "any active discounts",
+        "show me promo codes",
+        "whats on sale rn"
+      ],
+      "expect_tables": ["promotions"],
+      "expect_columns": ["status", "promo_code"],
+      "expect_join_tables": [],
+      "expect_sql_keywords": ["status", "promo_code", "Active"]
+    },
+    {
+      "id": "tc004",
+      "tier": "simple",
+      "description": "Carrier delivery delays",
+      "queries": [
+        "Which carrier has the most delayed deliveries?",
+        "whos delivering late",
+        "worst carrier for delays",
+        "late deliveries which company",
+        "shipping delays carrier breakdown"
+      ],
+      "expect_tables": ["shipments"],
+      "expect_columns": ["carrier", "estimated_delivery", "actual_delivery", "status"],
+      "expect_join_tables": ["orders", "warehouses"],
+      "expect_sql_keywords": ["carrier", "estimated_delivery", "actual_delivery", "COUNT"]
+    },
+    {
+      "id": "tc005",
+      "tier": "simple",
+      "description": "Negative reviews mentioning quality",
+      "queries": [
+        "Show me negative customer reviews mentioning quality",
+        "bad reviews about quality",
+        "whats customers complaining about",
+        "1 star reviews quality issues",
+        "worst product feedback"
+      ],
+      "expect_tables": ["reviews"],
+      "expect_columns": ["rating", "review_text"],
+      "expect_join_tables": ["products", "customers"],
+      "expect_sql_keywords": ["rating", "review_text", "ILIKE"]
+    },
+    {
+      "id": "tc006",
+      "tier": "simple",
+      "description": "Low stock products",
+      "queries": [
+        "Which products are below reorder point?",
+        "what products are running low",
+        "stock alerts show me",
+        "items almost out of stock",
+        "low inventory products"
+      ],
+      "expect_tables": ["inventory"],
+      "expect_columns": ["quantity_available", "reorder_point"],
+      "expect_join_tables": ["products", "warehouses"],
+      "expect_sql_keywords": ["quantity_available", "reorder_point"]
+    },
+    {
+      "id": "tc007",
+      "tier": "medium",
+      "description": "Top selling products",
+      "queries": [
+        "Top 10 best selling products by units sold and revenue",
+        "show me what sells the most",
+        "which products are popular",
+        "top products by sales",
+        "best sellers list",
+        "what are we selling most of"
+      ],
+      "expect_tables": ["order_items", "products"],
+      "expect_columns": ["quantity", "total_price", "product_name", "product_id"],
+      "expect_join_tables": ["orders", "products"],
+      "expect_sql_keywords": ["SUM", "quantity", "product_id", "GROUP BY"]
+    },
+    {
+      "id": "tc008",
+      "tier": "medium",
+      "description": "Top customers by lifetime value",
+      "queries": [
+        "Top customers by lifetime spending with order count",
+        "who spends the most with us",
+        "show me big spenders",
+        "best customers by money spent",
+        "high value customers vip",
+        "who are our whales"
+      ],
+      "expect_tables": ["customers", "orders"],
+      "expect_columns": ["customer_id", "total_amount", "first_name", "last_name"],
+      "expect_join_tables": ["orders", "customers"],
+      "expect_sql_keywords": ["SUM", "total_amount", "customer_id", "GROUP BY"]
+    },
+    {
+      "id": "tc009",
+      "tier": "medium",
+      "description": "Revenue by payment method",
+      "queries": [
+        "Revenue breakdown by payment method and success rate",
+        "how do people pay us",
+        "credit card vs paypal breakdown",
+        "payment method stats",
+        "which payment method is most used"
+      ],
+      "expect_tables": ["payment_transactions"],
+      "expect_columns": ["payment_method", "amount", "status", "processing_fee"],
+      "expect_join_tables": ["orders"],
+      "expect_sql_keywords": ["payment_method", "SUM", "amount", "GROUP BY"]
+    },
+    {
+      "id": "tc010",
+      "tier": "medium",
+      "description": "Product profit margins",
+      "queries": [
+        "Profit margin per product — selling price vs supplier cost",
+        "whats our margin on products",
+        "show product profit margins",
+        "how much profit per item",
+        "cost vs selling price analysis"
+      ],
+      "expect_tables": ["products", "product_suppliers"],
+      "expect_columns": ["price", "cost_price", "product_id"],
+      "expect_join_tables": ["suppliers", "products"],
+      "expect_sql_keywords": ["price", "cost_price", "product_id"]
+    },
+    {
+      "id": "tc011",
+      "tier": "medium",
+      "description": "Shipping performance by carrier",
+      "queries": [
+        "Average shipping cost and late delivery rate by carrier",
+        "how much does shipping cost per carrier",
+        "carrier performance on time vs late",
+        "shipping stats by company",
+        "fedex ups usps comparison"
+      ],
+      "expect_tables": ["shipments"],
+      "expect_columns": ["carrier", "shipping_cost", "estimated_delivery", "actual_delivery"],
+      "expect_join_tables": ["orders", "warehouses"],
+      "expect_sql_keywords": ["carrier", "shipping_cost", "AVG", "GROUP BY"]
+    },
+    {
+      "id": "tc012",
+      "tier": "medium",
+      "description": "Top rated suppliers",
+      "queries": [
+        "Top rated suppliers with their product count and payment terms",
+        "which suppliers are best",
+        "show me good vendors",
+        "supplier quality ranking",
+        "best performing suppliers"
+      ],
+      "expect_tables": ["suppliers"],
+      "expect_columns": ["rating", "supplier_name", "payment_terms"],
+      "expect_join_tables": ["product_suppliers"],
+      "expect_sql_keywords": ["rating", "supplier_name", "ORDER BY"]
+    },
+    {
+      "id": "tc013",
+      "tier": "complex",
+      "description": "Low warehouse stock for top sellers",
+      "queries": [
+        "Which warehouses have critically low stock for top selling products?",
+        "where are we running low on popular items",
+        "stock running out which warehouse",
+        "top selling products low inventory alert",
+        "warehouse stock critical for bestsellers"
+      ],
+      "expect_tables": ["inventory", "warehouses", "products", "order_items"],
+      "expect_columns": ["quantity_available", "reorder_point", "warehouse_name", "product_id"],
+      "expect_join_tables": ["inventory", "warehouses", "products"],
+      "expect_sql_keywords": ["quantity_available", "reorder_point", "warehouse_id"]
+    },
+    {
+      "id": "tc014",
+      "tier": "complex",
+      "description": "Category revenue with ratings and returns",
+      "queries": [
+        "Revenue by product category with average rating and return rate",
+        "which categories make most money and have good reviews",
+        "category sales and ratings breakdown",
+        "best and worst performing categories",
+        "category performance overview"
+      ],
+      "expect_tables": ["products", "order_items", "reviews", "orders"],
+      "expect_columns": ["category", "total_price", "rating", "order_status", "product_id"],
+      "expect_join_tables": ["products", "reviews", "order_items"],
+      "expect_sql_keywords": ["category", "AVG", "rating", "SUM", "GROUP BY"]
+    },
+    {
+      "id": "tc015",
+      "tier": "complex",
+      "description": "High value customers with brand and reviews",
+      "queries": [
+        "Customers spending over $5000 — their favourite brand and reviews",
+        "who are our vip customers and what brands they like",
+        "big spenders top brands and feedback",
+        "customers over 5k what do they buy",
+        "high value customer brand preference"
+      ],
+      "expect_tables": ["customers", "orders", "order_items", "products", "reviews"],
+      "expect_columns": ["customer_id", "total_amount", "brand", "rating", "first_name"],
+      "expect_join_tables": ["customers", "orders", "products"],
+      "expect_sql_keywords": ["customer_id", "brand", "SUM", "total_amount", "HAVING"]
+    },
+    {
+      "id": "tc016",
+      "tier": "complex",
+      "description": "Payment method vs order outcome",
+      "queries": [
+        "Payment method cancellation and refund rates vs order status breakdown",
+        "which payment type gets cancelled most",
+        "credit card vs paypal cancellations",
+        "refund rates by how they paid",
+        "payment method and order outcome analysis"
+      ],
+      "expect_tables": ["orders", "payment_transactions"],
+      "expect_columns": ["payment_method", "order_status", "status", "amount"],
+      "expect_join_tables": ["orders", "payment_transactions"],
+      "expect_sql_keywords": ["payment_method", "order_status", "COUNT", "GROUP BY"]
+    },
+    {
+      "id": "tc017",
+      "tier": "complex",
+      "description": "Revenue by state with customer stats",
+      "queries": [
+        "For each state — total revenue, unique customers, most popular category",
+        "sales by state breakdown",
+        "which states buy the most from us",
+        "state wise revenue and customer count",
+        "geographic breakdown of sales"
+      ],
+      "expect_tables": ["orders", "customers", "order_items", "products"],
+      "expect_columns": ["shipping_state", "total_amount", "customer_id", "category"],
+      "expect_join_tables": ["customers", "orders", "order_items"],
+      "expect_sql_keywords": ["shipping_state", "COUNT", "SUM", "GROUP BY"]
+    },
+    {
+      "id": "tc018",
+      "tier": "complex",
+      "description": "Suppliers linked to bad reviews",
+      "queries": [
+        "Suppliers whose products get 1-2 star reviews — show lead time and cost",
+        "which vendors supply the stuff customers hate",
+        "bad review products which supplier",
+        "low rated product suppliers",
+        "suppliers linked to negative feedback"
+      ],
+      "expect_tables": ["suppliers", "product_suppliers", "products", "reviews"],
+      "expect_columns": ["supplier_name", "cost_price", "lead_time_days", "rating"],
+      "expect_join_tables": ["suppliers", "product_suppliers", "products"],
+      "expect_sql_keywords": ["rating", "supplier_id", "cost_price", "lead_time_days"]
+    }
+  ]
+}

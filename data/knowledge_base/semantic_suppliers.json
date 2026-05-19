@@ -1,0 +1,261 @@
+{
+  "table": "suppliers",
+  "description": "Supplier master data. Name column is supplier_name, not name.",
+  "total_chunks": 13,
+  "chunks": [
+    {
+      "chunk_id": "tbl_suppliers_overview",
+      "chunk_type": "table_overview",
+      "entity_type": "table",
+      "table_name": "suppliers",
+      "text": "TABLE: suppliers\n\nDESCRIPTION: Supplier master data. Name column is supplier_name, not name.\n\nNATURAL_LANGUAGE_TERMS: suppliers, vendors, manufacturers, distributors, supplier list, vendor list\n\nPRIMARY_KEY: supplier_id\n\nFOREIGN_KEYS: none\n\nCOLUMNS: supplier_id, supplier_name, contact_person, email, phone, address, city, state, country, payment_terms, rating, created_at\n\nUSE_CASES: Supplier lookup, supplier performance, vendor contact, supplier rating",
+      "metadata": {
+        "chunk_type": "table_overview",
+        "entity": "table",
+        "table": "suppliers",
+        "pk": "supplier_id",
+        "fks": [],
+        "text": "TABLE: suppliers\n\nDESCRIPTION: Supplier master data. Name column is supplier_name, not name.\n\nNATURAL_LANGUAGE_TERMS: suppliers, vendors, manufacturers, distributors, supplier list, vendor list\n\nPRIMARY_KEY: supplier_id\n\nFOREIGN_KEYS: none\n\nCOLUMNS: supplier_id, supplier_name, contact_person, email, phone, address, city, state, country, payment_terms, rating, created_at\n\nUSE_CASES: Supplier lookup, supplier performance, vendor contact, supplier rating"
+      }
+    },
+    {
+      "chunk_id": "col_suppliers_supplier_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "suppliers",
+      "column_name": "supplier_id",
+      "text": "COLUMN: suppliers.supplier_id\n\nDESCRIPTION: Primary key.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "suppliers",
+        "column": "supplier_id",
+        "type": "INTEGER",
+        "is_pk": true,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: suppliers.supplier_id\n\nDESCRIPTION: Primary key.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: suppliers"
+      }
+    },
+    {
+      "chunk_id": "col_suppliers_supplier_name",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "suppliers",
+      "column_name": "supplier_name",
+      "text": "COLUMN: suppliers.supplier_name\n\nDESCRIPTION: Company name. Column is supplier_name \u2014 NOT name.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "suppliers",
+        "column": "supplier_name",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: suppliers.supplier_name\n\nDESCRIPTION: Company name. Column is supplier_name \u2014 NOT name.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers"
+      }
+    },
+    {
+      "chunk_id": "col_suppliers_contact_person",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "suppliers",
+      "column_name": "contact_person",
+      "text": "COLUMN: suppliers.contact_person\n\nDESCRIPTION: Primary contact name at the supplier.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "suppliers",
+        "column": "contact_person",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: suppliers.contact_person\n\nDESCRIPTION: Primary contact name at the supplier.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers"
+      }
+    },
+    {
+      "chunk_id": "col_suppliers_email",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "suppliers",
+      "column_name": "email",
+      "text": "COLUMN: suppliers.email\n\nDESCRIPTION: Supplier contact email.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "suppliers",
+        "column": "email",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: suppliers.email\n\nDESCRIPTION: Supplier contact email.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers"
+      }
+    },
+    {
+      "chunk_id": "col_suppliers_phone",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "suppliers",
+      "column_name": "phone",
+      "text": "COLUMN: suppliers.phone\n\nDESCRIPTION: Supplier phone number.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "suppliers",
+        "column": "phone",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: suppliers.phone\n\nDESCRIPTION: Supplier phone number.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers"
+      }
+    },
+    {
+      "chunk_id": "col_suppliers_address",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "suppliers",
+      "column_name": "address",
+      "text": "COLUMN: suppliers.address\n\nDESCRIPTION: Street address.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "suppliers",
+        "column": "address",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: suppliers.address\n\nDESCRIPTION: Street address.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers"
+      }
+    },
+    {
+      "chunk_id": "col_suppliers_city",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "suppliers",
+      "column_name": "city",
+      "text": "COLUMN: suppliers.city\n\nDESCRIPTION: City.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "suppliers",
+        "column": "city",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: suppliers.city\n\nDESCRIPTION: City.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers"
+      }
+    },
+    {
+      "chunk_id": "col_suppliers_state",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "suppliers",
+      "column_name": "state",
+      "text": "COLUMN: suppliers.state\n\nDESCRIPTION: State.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "suppliers",
+        "column": "state",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: suppliers.state\n\nDESCRIPTION: State.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers"
+      }
+    },
+    {
+      "chunk_id": "col_suppliers_country",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "suppliers",
+      "column_name": "country",
+      "text": "COLUMN: suppliers.country\n\nDESCRIPTION: Country.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers\n\nVALID VALUES: 'Bangladesh', 'China', 'Germany', 'India', 'Japan', 'Mexico', 'South Korea', 'Taiwan', 'USA', 'Vietnam'",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "suppliers",
+        "column": "country",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [
+          "Bangladesh",
+          "China",
+          "Germany",
+          "India",
+          "Japan",
+          "Mexico",
+          "South Korea",
+          "Taiwan",
+          "USA",
+          "Vietnam"
+        ],
+        "text": "COLUMN: suppliers.country\n\nDESCRIPTION: Country.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers\n\nVALID VALUES: 'Bangladesh', 'China', 'Germany', 'India', 'Japan', 'Mexico', 'South Korea', 'Taiwan', 'USA', 'Vietnam'"
+      }
+    },
+    {
+      "chunk_id": "col_suppliers_payment_terms",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "suppliers",
+      "column_name": "payment_terms",
+      "text": "COLUMN: suppliers.payment_terms\n\nDESCRIPTION: Payment terms e.g. Net30, Net60.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "suppliers",
+        "column": "payment_terms",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: suppliers.payment_terms\n\nDESCRIPTION: Payment terms e.g. Net30, Net60.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers"
+      }
+    },
+    {
+      "chunk_id": "col_suppliers_rating",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "suppliers",
+      "column_name": "rating",
+      "text": "COLUMN: suppliers.rating\n\nDESCRIPTION: Supplier performance rating.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "suppliers",
+        "column": "rating",
+        "type": "NUMERIC",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: suppliers.rating\n\nDESCRIPTION: Supplier performance rating.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers"
+      }
+    },
+    {
+      "chunk_id": "col_suppliers_created_at",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "suppliers",
+      "column_name": "created_at",
+      "text": "COLUMN: suppliers.created_at\n\nDESCRIPTION: When supplier was added.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "suppliers",
+        "column": "created_at",
+        "type": "TIMESTAMP",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: suppliers.created_at\n\nDESCRIPTION: When supplier was added.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: suppliers"
+      }
+    }
+  ]
+}

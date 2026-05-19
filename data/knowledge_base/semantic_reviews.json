@@ -1,0 +1,198 @@
+{
+  "table": "reviews",
+  "description": "Customer product reviews and ratings. Table name is reviews, not product_reviews.",
+  "total_chunks": 10,
+  "chunks": [
+    {
+      "chunk_id": "tbl_reviews_overview",
+      "chunk_type": "table_overview",
+      "entity_type": "table",
+      "table_name": "reviews",
+      "text": "TABLE: reviews\n\nDESCRIPTION: Customer product reviews and ratings. Table name is reviews, not product_reviews.\n\nNATURAL_LANGUAGE_TERMS: reviews, ratings, customer reviews, product ratings, feedback, star ratings, product feedback\n\nPRIMARY_KEY: review_id\n\nFOREIGN_KEYS: product_id \u2192 products.product_id, customer_id \u2192 customers.customer_id\n\nCOLUMNS: review_id, product_id, customer_id, rating, review_title, review_text, review_date, verified_purchase, helpful_votes\n\nUSE_CASES: Average rating, top rated products, customer feedback analysis",
+      "metadata": {
+        "chunk_type": "table_overview",
+        "entity": "table",
+        "table": "reviews",
+        "pk": "review_id",
+        "fks": [
+          "product_id \u2192 products.product_id",
+          "customer_id \u2192 customers.customer_id"
+        ],
+        "text": "TABLE: reviews\n\nDESCRIPTION: Customer product reviews and ratings. Table name is reviews, not product_reviews.\n\nNATURAL_LANGUAGE_TERMS: reviews, ratings, customer reviews, product ratings, feedback, star ratings, product feedback\n\nPRIMARY_KEY: review_id\n\nFOREIGN_KEYS: product_id \u2192 products.product_id, customer_id \u2192 customers.customer_id\n\nCOLUMNS: review_id, product_id, customer_id, rating, review_title, review_text, review_date, verified_purchase, helpful_votes\n\nUSE_CASES: Average rating, top rated products, customer feedback analysis"
+      }
+    },
+    {
+      "chunk_id": "col_reviews_review_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "reviews",
+      "column_name": "review_id",
+      "text": "COLUMN: reviews.review_id\n\nDESCRIPTION: Primary key.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: reviews",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "reviews",
+        "column": "review_id",
+        "type": "INTEGER",
+        "is_pk": true,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: reviews.review_id\n\nDESCRIPTION: Primary key.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: reviews"
+      }
+    },
+    {
+      "chunk_id": "col_reviews_product_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "reviews",
+      "column_name": "product_id",
+      "text": "COLUMN: reviews.product_id\n\nDESCRIPTION: FK \u2192 products.product_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: reviews",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "reviews",
+        "column": "product_id",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": true,
+        "sample_values": [],
+        "text": "COLUMN: reviews.product_id\n\nDESCRIPTION: FK \u2192 products.product_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: reviews"
+      }
+    },
+    {
+      "chunk_id": "col_reviews_customer_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "reviews",
+      "column_name": "customer_id",
+      "text": "COLUMN: reviews.customer_id\n\nDESCRIPTION: FK \u2192 customers.customer_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: reviews",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "reviews",
+        "column": "customer_id",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": true,
+        "sample_values": [],
+        "text": "COLUMN: reviews.customer_id\n\nDESCRIPTION: FK \u2192 customers.customer_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: reviews"
+      }
+    },
+    {
+      "chunk_id": "col_reviews_rating",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "reviews",
+      "column_name": "rating",
+      "text": "COLUMN: reviews.rating\n\nDESCRIPTION: Star rating 1\u20135.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: reviews",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "reviews",
+        "column": "rating",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: reviews.rating\n\nDESCRIPTION: Star rating 1\u20135.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: reviews"
+      }
+    },
+    {
+      "chunk_id": "col_reviews_review_title",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "reviews",
+      "column_name": "review_title",
+      "text": "COLUMN: reviews.review_title\n\nDESCRIPTION: Short summary title of the review.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: reviews",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "reviews",
+        "column": "review_title",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: reviews.review_title\n\nDESCRIPTION: Short summary title of the review.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: reviews"
+      }
+    },
+    {
+      "chunk_id": "col_reviews_review_text",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "reviews",
+      "column_name": "review_text",
+      "text": "COLUMN: reviews.review_text\n\nDESCRIPTION: Full review body text.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: reviews",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "reviews",
+        "column": "review_text",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: reviews.review_text\n\nDESCRIPTION: Full review body text.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: reviews"
+      }
+    },
+    {
+      "chunk_id": "col_reviews_review_date",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "reviews",
+      "column_name": "review_date",
+      "text": "COLUMN: reviews.review_date\n\nDESCRIPTION: When review was submitted.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: reviews",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "reviews",
+        "column": "review_date",
+        "type": "TIMESTAMP",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: reviews.review_date\n\nDESCRIPTION: When review was submitted.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: reviews"
+      }
+    },
+    {
+      "chunk_id": "col_reviews_verified_purchase",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "reviews",
+      "column_name": "verified_purchase",
+      "text": "COLUMN: reviews.verified_purchase\n\nDESCRIPTION: Whether reviewer actually purchased the product.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: reviews\n\nVALID VALUES: 'Yes'",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "reviews",
+        "column": "verified_purchase",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [
+          "Yes"
+        ],
+        "text": "COLUMN: reviews.verified_purchase\n\nDESCRIPTION: Whether reviewer actually purchased the product.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: reviews\n\nVALID VALUES: 'Yes'"
+      }
+    },
+    {
+      "chunk_id": "col_reviews_helpful_votes",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "reviews",
+      "column_name": "helpful_votes",
+      "text": "COLUMN: reviews.helpful_votes\n\nDESCRIPTION: Number of customers who found this review helpful.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: reviews",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "reviews",
+        "column": "helpful_votes",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: reviews.helpful_votes\n\nDESCRIPTION: Number of customers who found this review helpful.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: reviews"
+      }
+    }
+  ]
+}

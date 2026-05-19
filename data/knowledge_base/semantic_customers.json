@@ -1,0 +1,233 @@
+{
+  "table": "customers",
+  "description": "Registered customers. First and last name stored separately.",
+  "total_chunks": 12,
+  "chunks": [
+    {
+      "chunk_id": "tbl_customers_overview",
+      "chunk_type": "table_overview",
+      "entity_type": "table",
+      "table_name": "customers",
+      "text": "TABLE: customers\n\nDESCRIPTION: Registered customers. First and last name stored separately.\n\nNATURAL_LANGUAGE_TERMS: customers, buyers, users, shoppers, clients, registered users, account holders\n\nPRIMARY_KEY: customer_id\n\nFOREIGN_KEYS: none\n\nCOLUMNS: customer_id, first_name, last_name, email, phone, address, city, state, zip_code, country, created_at\n\nUSE_CASES: Customer lookup, customer segmentation, contact info, order history by customer",
+      "metadata": {
+        "chunk_type": "table_overview",
+        "entity": "table",
+        "table": "customers",
+        "pk": "customer_id",
+        "fks": [],
+        "text": "TABLE: customers\n\nDESCRIPTION: Registered customers. First and last name stored separately.\n\nNATURAL_LANGUAGE_TERMS: customers, buyers, users, shoppers, clients, registered users, account holders\n\nPRIMARY_KEY: customer_id\n\nFOREIGN_KEYS: none\n\nCOLUMNS: customer_id, first_name, last_name, email, phone, address, city, state, zip_code, country, created_at\n\nUSE_CASES: Customer lookup, customer segmentation, contact info, order history by customer"
+      }
+    },
+    {
+      "chunk_id": "col_customers_customer_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customers",
+      "column_name": "customer_id",
+      "text": "COLUMN: customers.customer_id\n\nDESCRIPTION: Primary key. Unique customer identifier.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: customers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customers",
+        "column": "customer_id",
+        "type": "INTEGER",
+        "is_pk": true,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customers.customer_id\n\nDESCRIPTION: Primary key. Unique customer identifier.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: customers"
+      }
+    },
+    {
+      "chunk_id": "col_customers_first_name",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customers",
+      "column_name": "first_name",
+      "text": "COLUMN: customers.first_name\n\nDESCRIPTION: Customer's first name.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customers",
+        "column": "first_name",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customers.first_name\n\nDESCRIPTION: Customer's first name.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers"
+      }
+    },
+    {
+      "chunk_id": "col_customers_last_name",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customers",
+      "column_name": "last_name",
+      "text": "COLUMN: customers.last_name\n\nDESCRIPTION: Customer's last name.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customers",
+        "column": "last_name",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customers.last_name\n\nDESCRIPTION: Customer's last name.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers"
+      }
+    },
+    {
+      "chunk_id": "col_customers_email",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customers",
+      "column_name": "email",
+      "text": "COLUMN: customers.email\n\nDESCRIPTION: Email address. Use for customer identification.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customers",
+        "column": "email",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customers.email\n\nDESCRIPTION: Email address. Use for customer identification.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers"
+      }
+    },
+    {
+      "chunk_id": "col_customers_phone",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customers",
+      "column_name": "phone",
+      "text": "COLUMN: customers.phone\n\nDESCRIPTION: Phone number.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customers",
+        "column": "phone",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customers.phone\n\nDESCRIPTION: Phone number.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers"
+      }
+    },
+    {
+      "chunk_id": "col_customers_address",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customers",
+      "column_name": "address",
+      "text": "COLUMN: customers.address\n\nDESCRIPTION: Primary address line.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customers",
+        "column": "address",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customers.address\n\nDESCRIPTION: Primary address line.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers"
+      }
+    },
+    {
+      "chunk_id": "col_customers_city",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customers",
+      "column_name": "city",
+      "text": "COLUMN: customers.city\n\nDESCRIPTION: City of residence.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customers",
+        "column": "city",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customers.city\n\nDESCRIPTION: City of residence.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers"
+      }
+    },
+    {
+      "chunk_id": "col_customers_state",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customers",
+      "column_name": "state",
+      "text": "COLUMN: customers.state\n\nDESCRIPTION: State or province.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customers",
+        "column": "state",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customers.state\n\nDESCRIPTION: State or province.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers"
+      }
+    },
+    {
+      "chunk_id": "col_customers_zip_code",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customers",
+      "column_name": "zip_code",
+      "text": "COLUMN: customers.zip_code\n\nDESCRIPTION: Postal code.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customers",
+        "column": "zip_code",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customers.zip_code\n\nDESCRIPTION: Postal code.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers"
+      }
+    },
+    {
+      "chunk_id": "col_customers_country",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customers",
+      "column_name": "country",
+      "text": "COLUMN: customers.country\n\nDESCRIPTION: Country.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers\n\nVALID VALUES: 'USA'",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customers",
+        "column": "country",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [
+          "USA"
+        ],
+        "text": "COLUMN: customers.country\n\nDESCRIPTION: Country.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers\n\nVALID VALUES: 'USA'"
+      }
+    },
+    {
+      "chunk_id": "col_customers_created_at",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customers",
+      "column_name": "created_at",
+      "text": "COLUMN: customers.created_at\n\nDESCRIPTION: Account creation date.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customers",
+        "column": "created_at",
+        "type": "TIMESTAMP",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customers.created_at\n\nDESCRIPTION: Account creation date.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customers"
+      }
+    }
+  ]
+}

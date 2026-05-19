@@ -1,0 +1,259 @@
+{
+  "table": "customer_addresses",
+  "description": "Stores multiple shipping/billing addresses per customer.",
+  "total_chunks": 13,
+  "chunks": [
+    {
+      "chunk_id": "tbl_customer_addresses_overview",
+      "chunk_type": "table_overview",
+      "entity_type": "table",
+      "table_name": "customer_addresses",
+      "text": "TABLE: customer_addresses\n\nDESCRIPTION: Stores multiple shipping/billing addresses per customer.\n\nNATURAL_LANGUAGE_TERMS: addresses, customer addresses, shipping addresses, billing addresses, delivery addresses, address book\n\nPRIMARY_KEY: address_id\n\nFOREIGN_KEYS: customer_id \u2192 customers.customer_id\n\nCOLUMNS: address_id, customer_id, address_type, is_default, address_line1, address_line2, city, state, zip_code, country, phone, created_at\n\nUSE_CASES: Shipping address lookup, address book, delivery location analysis",
+      "metadata": {
+        "chunk_type": "table_overview",
+        "entity": "table",
+        "table": "customer_addresses",
+        "pk": "address_id",
+        "fks": [
+          "customer_id \u2192 customers.customer_id"
+        ],
+        "text": "TABLE: customer_addresses\n\nDESCRIPTION: Stores multiple shipping/billing addresses per customer.\n\nNATURAL_LANGUAGE_TERMS: addresses, customer addresses, shipping addresses, billing addresses, delivery addresses, address book\n\nPRIMARY_KEY: address_id\n\nFOREIGN_KEYS: customer_id \u2192 customers.customer_id\n\nCOLUMNS: address_id, customer_id, address_type, is_default, address_line1, address_line2, city, state, zip_code, country, phone, created_at\n\nUSE_CASES: Shipping address lookup, address book, delivery location analysis"
+      }
+    },
+    {
+      "chunk_id": "col_customer_addresses_address_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customer_addresses",
+      "column_name": "address_id",
+      "text": "COLUMN: customer_addresses.address_id\n\nDESCRIPTION: Primary key. Unique address identifier.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: customer_addresses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customer_addresses",
+        "column": "address_id",
+        "type": "INTEGER",
+        "is_pk": true,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customer_addresses.address_id\n\nDESCRIPTION: Primary key. Unique address identifier.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: customer_addresses"
+      }
+    },
+    {
+      "chunk_id": "col_customer_addresses_customer_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customer_addresses",
+      "column_name": "customer_id",
+      "text": "COLUMN: customer_addresses.customer_id\n\nDESCRIPTION: FK \u2192 customers.customer_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: customer_addresses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customer_addresses",
+        "column": "customer_id",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": true,
+        "sample_values": [],
+        "text": "COLUMN: customer_addresses.customer_id\n\nDESCRIPTION: FK \u2192 customers.customer_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: customer_addresses"
+      }
+    },
+    {
+      "chunk_id": "col_customer_addresses_address_type",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customer_addresses",
+      "column_name": "address_type",
+      "text": "COLUMN: customer_addresses.address_type\n\nDESCRIPTION: Type of address.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses\n\nVALID VALUES: 'Billing', 'Both', 'Shipping'",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customer_addresses",
+        "column": "address_type",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [
+          "Billing",
+          "Both",
+          "Shipping"
+        ],
+        "text": "COLUMN: customer_addresses.address_type\n\nDESCRIPTION: Type of address.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses\n\nVALID VALUES: 'Billing', 'Both', 'Shipping'"
+      }
+    },
+    {
+      "chunk_id": "col_customer_addresses_is_default",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customer_addresses",
+      "column_name": "is_default",
+      "text": "COLUMN: customer_addresses.is_default\n\nDESCRIPTION: Whether this is the customer's default address.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses\n\nVALID VALUES: 'No', 'Yes'",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customer_addresses",
+        "column": "is_default",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [
+          "No",
+          "Yes"
+        ],
+        "text": "COLUMN: customer_addresses.is_default\n\nDESCRIPTION: Whether this is the customer's default address.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses\n\nVALID VALUES: 'No', 'Yes'"
+      }
+    },
+    {
+      "chunk_id": "col_customer_addresses_address_line1",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customer_addresses",
+      "column_name": "address_line1",
+      "text": "COLUMN: customer_addresses.address_line1\n\nDESCRIPTION: Street address line 1.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customer_addresses",
+        "column": "address_line1",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customer_addresses.address_line1\n\nDESCRIPTION: Street address line 1.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses"
+      }
+    },
+    {
+      "chunk_id": "col_customer_addresses_address_line2",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customer_addresses",
+      "column_name": "address_line2",
+      "text": "COLUMN: customer_addresses.address_line2\n\nDESCRIPTION: Street address line 2, suite, apt.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customer_addresses",
+        "column": "address_line2",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customer_addresses.address_line2\n\nDESCRIPTION: Street address line 2, suite, apt.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses"
+      }
+    },
+    {
+      "chunk_id": "col_customer_addresses_city",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customer_addresses",
+      "column_name": "city",
+      "text": "COLUMN: customer_addresses.city\n\nDESCRIPTION: City name.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customer_addresses",
+        "column": "city",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customer_addresses.city\n\nDESCRIPTION: City name.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses"
+      }
+    },
+    {
+      "chunk_id": "col_customer_addresses_state",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customer_addresses",
+      "column_name": "state",
+      "text": "COLUMN: customer_addresses.state\n\nDESCRIPTION: State or province.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customer_addresses",
+        "column": "state",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customer_addresses.state\n\nDESCRIPTION: State or province.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses"
+      }
+    },
+    {
+      "chunk_id": "col_customer_addresses_zip_code",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customer_addresses",
+      "column_name": "zip_code",
+      "text": "COLUMN: customer_addresses.zip_code\n\nDESCRIPTION: Postal / ZIP code.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customer_addresses",
+        "column": "zip_code",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customer_addresses.zip_code\n\nDESCRIPTION: Postal / ZIP code.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses"
+      }
+    },
+    {
+      "chunk_id": "col_customer_addresses_country",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customer_addresses",
+      "column_name": "country",
+      "text": "COLUMN: customer_addresses.country\n\nDESCRIPTION: Country name.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customer_addresses",
+        "column": "country",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customer_addresses.country\n\nDESCRIPTION: Country name.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses"
+      }
+    },
+    {
+      "chunk_id": "col_customer_addresses_phone",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customer_addresses",
+      "column_name": "phone",
+      "text": "COLUMN: customer_addresses.phone\n\nDESCRIPTION: Contact phone for this address.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customer_addresses",
+        "column": "phone",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customer_addresses.phone\n\nDESCRIPTION: Contact phone for this address.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses"
+      }
+    },
+    {
+      "chunk_id": "col_customer_addresses_created_at",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "customer_addresses",
+      "column_name": "created_at",
+      "text": "COLUMN: customer_addresses.created_at\n\nDESCRIPTION: When the address was added.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "customer_addresses",
+        "column": "created_at",
+        "type": "TIMESTAMP",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: customer_addresses.created_at\n\nDESCRIPTION: When the address was added.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: customer_addresses"
+      }
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "table": "order_items",
+  "description": "Individual line items in each order. Revenue = SUM(total_price). No discount_percent column.",
+  "total_chunks": 7,
+  "chunks": [
+    {
+      "chunk_id": "tbl_order_items_overview",
+      "chunk_type": "table_overview",
+      "entity_type": "table",
+      "table_name": "order_items",
+      "text": "TABLE: order_items\n\nDESCRIPTION: Individual line items in each order. Revenue = SUM(total_price). No discount_percent column.\n\nNATURAL_LANGUAGE_TERMS: order items, line items, order details, what was ordered, products in order, items purchased, cart items\n\nPRIMARY_KEY: order_item_id\n\nFOREIGN_KEYS: order_id \u2192 orders.order_id, product_id \u2192 products.product_id\n\nCOLUMNS: order_item_id, order_id, product_id, quantity, unit_price, total_price\n\nUSE_CASES: Revenue by product, bestsellers, order breakdown, product sales analysis",
+      "metadata": {
+        "chunk_type": "table_overview",
+        "entity": "table",
+        "table": "order_items",
+        "pk": "order_item_id",
+        "fks": [
+          "order_id \u2192 orders.order_id",
+          "product_id \u2192 products.product_id"
+        ],
+        "text": "TABLE: order_items\n\nDESCRIPTION: Individual line items in each order. Revenue = SUM(total_price). No discount_percent column.\n\nNATURAL_LANGUAGE_TERMS: order items, line items, order details, what was ordered, products in order, items purchased, cart items\n\nPRIMARY_KEY: order_item_id\n\nFOREIGN_KEYS: order_id \u2192 orders.order_id, product_id \u2192 products.product_id\n\nCOLUMNS: order_item_id, order_id, product_id, quantity, unit_price, total_price\n\nUSE_CASES: Revenue by product, bestsellers, order breakdown, product sales analysis"
+      }
+    },
+    {
+      "chunk_id": "col_order_items_order_item_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "order_items",
+      "column_name": "order_item_id",
+      "text": "COLUMN: order_items.order_item_id\n\nDESCRIPTION: Primary key. Unique line item identifier.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: order_items",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "order_items",
+        "column": "order_item_id",
+        "type": "INTEGER",
+        "is_pk": true,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: order_items.order_item_id\n\nDESCRIPTION: Primary key. Unique line item identifier.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: order_items"
+      }
+    },
+    {
+      "chunk_id": "col_order_items_order_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "order_items",
+      "column_name": "order_id",
+      "text": "COLUMN: order_items.order_id\n\nDESCRIPTION: FK \u2192 orders.order_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: order_items",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "order_items",
+        "column": "order_id",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": true,
+        "sample_values": [],
+        "text": "COLUMN: order_items.order_id\n\nDESCRIPTION: FK \u2192 orders.order_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: order_items"
+      }
+    },
+    {
+      "chunk_id": "col_order_items_product_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "order_items",
+      "column_name": "product_id",
+      "text": "COLUMN: order_items.product_id\n\nDESCRIPTION: FK \u2192 products.product_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: order_items",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "order_items",
+        "column": "product_id",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": true,
+        "sample_values": [],
+        "text": "COLUMN: order_items.product_id\n\nDESCRIPTION: FK \u2192 products.product_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: order_items"
+      }
+    },
+    {
+      "chunk_id": "col_order_items_quantity",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "order_items",
+      "column_name": "quantity",
+      "text": "COLUMN: order_items.quantity\n\nDESCRIPTION: Number of units ordered.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: order_items",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "order_items",
+        "column": "quantity",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: order_items.quantity\n\nDESCRIPTION: Number of units ordered.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: order_items"
+      }
+    },
+    {
+      "chunk_id": "col_order_items_unit_price",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "order_items",
+      "column_name": "unit_price",
+      "text": "COLUMN: order_items.unit_price\n\nDESCRIPTION: Price per unit at time of purchase.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: order_items",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "order_items",
+        "column": "unit_price",
+        "type": "NUMERIC",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: order_items.unit_price\n\nDESCRIPTION: Price per unit at time of purchase.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: order_items"
+      }
+    },
+    {
+      "chunk_id": "col_order_items_total_price",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "order_items",
+      "column_name": "total_price",
+      "text": "COLUMN: order_items.total_price\n\nDESCRIPTION: Pre-calculated: unit_price \u00d7 quantity. Use SUM(total_price) for revenue. There is NO discount_percent column in this table.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: order_items",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "order_items",
+        "column": "total_price",
+        "type": "NUMERIC",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: order_items.total_price\n\nDESCRIPTION: Pre-calculated: unit_price \u00d7 quantity. Use SUM(total_price) for revenue. There is NO discount_percent column in this table.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: order_items"
+      }
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "table": "payment_transactions",
+  "description": "Payment records for orders. Table name is payment_transactions, not payments.",
+  "total_chunks": 12,
+  "chunks": [
+    {
+      "chunk_id": "tbl_payment_transactions_overview",
+      "chunk_type": "table_overview",
+      "entity_type": "table",
+      "table_name": "payment_transactions",
+      "text": "TABLE: payment_transactions\n\nDESCRIPTION: Payment records for orders. Table name is payment_transactions, not payments.\n\nNATURAL_LANGUAGE_TERMS: payments, payment transactions, payment records, transactions, payment history, payment processing\n\nPRIMARY_KEY: transaction_id\n\nFOREIGN_KEYS: order_id \u2192 orders.order_id\n\nCOLUMNS: transaction_id, order_id, payment_method, payment_provider, transaction_date, amount, currency, status, card_last_four, authorization_code, processing_fee\n\nUSE_CASES: Payment status, revenue by payment method, failed payment analysis",
+      "metadata": {
+        "chunk_type": "table_overview",
+        "entity": "table",
+        "table": "payment_transactions",
+        "pk": "transaction_id",
+        "fks": [
+          "order_id \u2192 orders.order_id"
+        ],
+        "text": "TABLE: payment_transactions\n\nDESCRIPTION: Payment records for orders. Table name is payment_transactions, not payments.\n\nNATURAL_LANGUAGE_TERMS: payments, payment transactions, payment records, transactions, payment history, payment processing\n\nPRIMARY_KEY: transaction_id\n\nFOREIGN_KEYS: order_id \u2192 orders.order_id\n\nCOLUMNS: transaction_id, order_id, payment_method, payment_provider, transaction_date, amount, currency, status, card_last_four, authorization_code, processing_fee\n\nUSE_CASES: Payment status, revenue by payment method, failed payment analysis"
+      }
+    },
+    {
+      "chunk_id": "col_payment_transactions_transaction_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "payment_transactions",
+      "column_name": "transaction_id",
+      "text": "COLUMN: payment_transactions.transaction_id\n\nDESCRIPTION: Primary key.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: payment_transactions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "payment_transactions",
+        "column": "transaction_id",
+        "type": "INTEGER",
+        "is_pk": true,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: payment_transactions.transaction_id\n\nDESCRIPTION: Primary key.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: payment_transactions"
+      }
+    },
+    {
+      "chunk_id": "col_payment_transactions_order_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "payment_transactions",
+      "column_name": "order_id",
+      "text": "COLUMN: payment_transactions.order_id\n\nDESCRIPTION: FK \u2192 orders.order_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: payment_transactions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "payment_transactions",
+        "column": "order_id",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": true,
+        "sample_values": [],
+        "text": "COLUMN: payment_transactions.order_id\n\nDESCRIPTION: FK \u2192 orders.order_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: payment_transactions"
+      }
+    },
+    {
+      "chunk_id": "col_payment_transactions_payment_method",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "payment_transactions",
+      "column_name": "payment_method",
+      "text": "COLUMN: payment_transactions.payment_method\n\nDESCRIPTION: Payment method used.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions\n\nVALID VALUES: 'Apple Pay', 'Bank Transfer', 'Credit Card', 'Debit Card', 'Google Pay', 'PayPal'",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "payment_transactions",
+        "column": "payment_method",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [
+          "Apple Pay",
+          "Bank Transfer",
+          "Credit Card",
+          "Debit Card",
+          "Google Pay",
+          "PayPal"
+        ],
+        "text": "COLUMN: payment_transactions.payment_method\n\nDESCRIPTION: Payment method used.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions\n\nVALID VALUES: 'Apple Pay', 'Bank Transfer', 'Credit Card', 'Debit Card', 'Google Pay', 'PayPal'"
+      }
+    },
+    {
+      "chunk_id": "col_payment_transactions_payment_provider",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "payment_transactions",
+      "column_name": "payment_provider",
+      "text": "COLUMN: payment_transactions.payment_provider\n\nDESCRIPTION: Provider: Stripe, PayPal, Square.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "payment_transactions",
+        "column": "payment_provider",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: payment_transactions.payment_provider\n\nDESCRIPTION: Provider: Stripe, PayPal, Square.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions"
+      }
+    },
+    {
+      "chunk_id": "col_payment_transactions_transaction_date",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "payment_transactions",
+      "column_name": "transaction_date",
+      "text": "COLUMN: payment_transactions.transaction_date\n\nDESCRIPTION: When payment was processed.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "payment_transactions",
+        "column": "transaction_date",
+        "type": "TIMESTAMP",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: payment_transactions.transaction_date\n\nDESCRIPTION: When payment was processed.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions"
+      }
+    },
+    {
+      "chunk_id": "col_payment_transactions_amount",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "payment_transactions",
+      "column_name": "amount",
+      "text": "COLUMN: payment_transactions.amount\n\nDESCRIPTION: Payment amount.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "payment_transactions",
+        "column": "amount",
+        "type": "NUMERIC",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: payment_transactions.amount\n\nDESCRIPTION: Payment amount.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions"
+      }
+    },
+    {
+      "chunk_id": "col_payment_transactions_currency",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "payment_transactions",
+      "column_name": "currency",
+      "text": "COLUMN: payment_transactions.currency\n\nDESCRIPTION: Currency code.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions\n\nVALID VALUES: 'USD'",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "payment_transactions",
+        "column": "currency",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [
+          "USD"
+        ],
+        "text": "COLUMN: payment_transactions.currency\n\nDESCRIPTION: Currency code.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions\n\nVALID VALUES: 'USD'"
+      }
+    },
+    {
+      "chunk_id": "col_payment_transactions_status",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "payment_transactions",
+      "column_name": "status",
+      "text": "COLUMN: payment_transactions.status\n\nDESCRIPTION: Transaction outcome.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions\n\nVALID VALUES: 'Completed', 'Failed', 'Refunded'",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "payment_transactions",
+        "column": "status",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [
+          "Completed",
+          "Failed",
+          "Refunded"
+        ],
+        "text": "COLUMN: payment_transactions.status\n\nDESCRIPTION: Transaction outcome.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions\n\nVALID VALUES: 'Completed', 'Failed', 'Refunded'"
+      }
+    },
+    {
+      "chunk_id": "col_payment_transactions_card_last_four",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "payment_transactions",
+      "column_name": "card_last_four",
+      "text": "COLUMN: payment_transactions.card_last_four\n\nDESCRIPTION: Last 4 digits of card if applicable.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "payment_transactions",
+        "column": "card_last_four",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: payment_transactions.card_last_four\n\nDESCRIPTION: Last 4 digits of card if applicable.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions"
+      }
+    },
+    {
+      "chunk_id": "col_payment_transactions_authorization_code",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "payment_transactions",
+      "column_name": "authorization_code",
+      "text": "COLUMN: payment_transactions.authorization_code\n\nDESCRIPTION: Payment gateway authorization code.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "payment_transactions",
+        "column": "authorization_code",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: payment_transactions.authorization_code\n\nDESCRIPTION: Payment gateway authorization code.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions"
+      }
+    },
+    {
+      "chunk_id": "col_payment_transactions_processing_fee",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "payment_transactions",
+      "column_name": "processing_fee",
+      "text": "COLUMN: payment_transactions.processing_fee\n\nDESCRIPTION: Fee charged by payment provider.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "payment_transactions",
+        "column": "processing_fee",
+        "type": "NUMERIC",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: payment_transactions.processing_fee\n\nDESCRIPTION: Fee charged by payment provider.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: payment_transactions"
+      }
+    }
+  ]
+}

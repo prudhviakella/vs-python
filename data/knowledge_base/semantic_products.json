@@ -1,0 +1,174 @@
+{
+  "table": "products",
+  "description": "Product catalogue. PK is product_id. Name column is product_name. Category is a text string, not a FK.",
+  "total_chunks": 9,
+  "chunks": [
+    {
+      "chunk_id": "tbl_products_overview",
+      "chunk_type": "table_overview",
+      "entity_type": "table",
+      "table_name": "products",
+      "text": "TABLE: products\n\nDESCRIPTION: Product catalogue. PK is product_id. Name column is product_name. Category is a text string, not a FK.\n\nNATURAL_LANGUAGE_TERMS: products, items, merchandise, goods, product catalogue, SKUs, what we sell\n\nPRIMARY_KEY: product_id\n\nFOREIGN_KEYS: none\n\nCOLUMNS: product_id, product_name, category, brand, price, stock_quantity, description, created_at\n\nUSE_CASES: Product lookup, price queries, stock check, product performance analysis",
+      "metadata": {
+        "chunk_type": "table_overview",
+        "entity": "table",
+        "table": "products",
+        "pk": "product_id",
+        "fks": [],
+        "text": "TABLE: products\n\nDESCRIPTION: Product catalogue. PK is product_id. Name column is product_name. Category is a text string, not a FK.\n\nNATURAL_LANGUAGE_TERMS: products, items, merchandise, goods, product catalogue, SKUs, what we sell\n\nPRIMARY_KEY: product_id\n\nFOREIGN_KEYS: none\n\nCOLUMNS: product_id, product_name, category, brand, price, stock_quantity, description, created_at\n\nUSE_CASES: Product lookup, price queries, stock check, product performance analysis"
+      }
+    },
+    {
+      "chunk_id": "col_products_product_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "products",
+      "column_name": "product_id",
+      "text": "COLUMN: products.product_id\n\nDESCRIPTION: Primary key. Use in JOINs: order_items.product_id = products.product_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: products",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "products",
+        "column": "product_id",
+        "type": "INTEGER",
+        "is_pk": true,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: products.product_id\n\nDESCRIPTION: Primary key. Use in JOINs: order_items.product_id = products.product_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: products"
+      }
+    },
+    {
+      "chunk_id": "col_products_product_name",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "products",
+      "column_name": "product_name",
+      "text": "COLUMN: products.product_name\n\nDESCRIPTION: Full product name. Column is product_name \u2014 NOT name.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: products",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "products",
+        "column": "product_name",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: products.product_name\n\nDESCRIPTION: Full product name. Column is product_name \u2014 NOT name.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: products"
+      }
+    },
+    {
+      "chunk_id": "col_products_category",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "products",
+      "column_name": "category",
+      "text": "COLUMN: products.category\n\nDESCRIPTION: Category as plain text e.g. Electronics, Clothing. This is NOT a foreign key.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: products",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "products",
+        "column": "category",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: products.category\n\nDESCRIPTION: Category as plain text e.g. Electronics, Clothing. This is NOT a foreign key.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: products"
+      }
+    },
+    {
+      "chunk_id": "col_products_brand",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "products",
+      "column_name": "brand",
+      "text": "COLUMN: products.brand\n\nDESCRIPTION: Brand or manufacturer name.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: products",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "products",
+        "column": "brand",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: products.brand\n\nDESCRIPTION: Brand or manufacturer name.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: products"
+      }
+    },
+    {
+      "chunk_id": "col_products_price",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "products",
+      "column_name": "price",
+      "text": "COLUMN: products.price\n\nDESCRIPTION: Current retail price.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: products",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "products",
+        "column": "price",
+        "type": "NUMERIC",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: products.price\n\nDESCRIPTION: Current retail price.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: products"
+      }
+    },
+    {
+      "chunk_id": "col_products_stock_quantity",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "products",
+      "column_name": "stock_quantity",
+      "text": "COLUMN: products.stock_quantity\n\nDESCRIPTION: Current stock level.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: products",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "products",
+        "column": "stock_quantity",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: products.stock_quantity\n\nDESCRIPTION: Current stock level.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: products"
+      }
+    },
+    {
+      "chunk_id": "col_products_description",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "products",
+      "column_name": "description",
+      "text": "COLUMN: products.description\n\nDESCRIPTION: Product description.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: products",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "products",
+        "column": "description",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: products.description\n\nDESCRIPTION: Product description.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: products"
+      }
+    },
+    {
+      "chunk_id": "col_products_created_at",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "products",
+      "column_name": "created_at",
+      "text": "COLUMN: products.created_at\n\nDESCRIPTION: When product was added to catalogue.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: products",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "products",
+        "column": "created_at",
+        "type": "TIMESTAMP",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: products.created_at\n\nDESCRIPTION: When product was added to catalogue.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: products"
+      }
+    }
+  ]
+}

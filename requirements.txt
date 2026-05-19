@@ -1,0 +1,42 @@
+# ── Core Python utilities ─────────────────────────────────────────────────────
+python-dotenv==1.0.1          # load .env files into os.environ
+requests==2.32.3              # synchronous HTTP client
+httpx==0.27.0                 # async HTTP client
+pandas                        # data manipulation + CSV loading
+
+# ── AWS ───────────────────────────────────────────────────────────────────────
+boto3                         # AWS SDK — S3 Vectors, Bedrock, AgentCore
+
+# ── LLM providers ─────────────────────────────────────────────────────────────
+openai                        # OpenAI API — embeddings (text-embedding-3-small)
+anthropic                     # Anthropic API — Claude Sonnet (local dev)
+
+# ── LangChain ─────────────────────────────────────────────────────────────────
+langchain                     # agent framework + tool-calling
+langchain-core                # base abstractions (messages, prompts, runnables)
+langchain-anthropic            # Claude integration for LangChain
+langchain-community           # community tools + utilities
+
+# ── Data validation ───────────────────────────────────────────────────────────
+pydantic==2.7.1               # data models + validation
+pydantic[email]==2.7.1        # email validation support
+
+# ── Database ─────────────────────────────────────────────────────────────────
+psycopg2-binary==2.9.9        # sync PostgreSQL driver (seed_db.py, legacy)
+asyncpg                       # async PostgreSQL driver (NLQ agent — non-blocking)
+
+# ── Async ─────────────────────────────────────────────────────────────────────
+asyncio-throttle==1.0.2       # rate limiting for async LLM calls
+
+# ── FastAPI + server ──────────────────────────────────────────────────────────
+fastapi==0.111.0              # web framework — A2A server
+uvicorn[standard]==0.29.0     # ASGI server to run FastAPI
+sse-starlette==2.1.0          # Server-Sent Events — streaming A2A responses
+
+# ── Data generation ───────────────────────────────────────────────────────────
+faker                         # synthetic data generation (generate_data.py)
+numpy                         # numerical ops used in data generation
+
+# ── Notebooks ─────────────────────────────────────────────────────────────────
+jupyter==1.0.0                # run .ipynb notebooks
+ipykernel==6.29.4             # Python kernel for Jupyter

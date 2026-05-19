@@ -1,0 +1,136 @@
+{
+  "table": "categories",
+  "description": "Product category hierarchy. Supports nested categories via parent_category_id.",
+  "total_chunks": 7,
+  "chunks": [
+    {
+      "chunk_id": "tbl_categories_overview",
+      "chunk_type": "table_overview",
+      "entity_type": "table",
+      "table_name": "categories",
+      "text": "TABLE: categories\n\nDESCRIPTION: Product category hierarchy. Supports nested categories via parent_category_id.\n\nNATURAL_LANGUAGE_TERMS: categories, product categories, category hierarchy, product types, product classification, departments, sections\n\nPRIMARY_KEY: category_id\n\nFOREIGN_KEYS: none\n\nCOLUMNS: category_id, category_name, parent_category_id, category_level, description, created_at\n\nUSE_CASES: Filter products by category, category breakdown, sales by department",
+      "metadata": {
+        "chunk_type": "table_overview",
+        "entity": "table",
+        "table": "categories",
+        "pk": "category_id",
+        "fks": [],
+        "text": "TABLE: categories\n\nDESCRIPTION: Product category hierarchy. Supports nested categories via parent_category_id.\n\nNATURAL_LANGUAGE_TERMS: categories, product categories, category hierarchy, product types, product classification, departments, sections\n\nPRIMARY_KEY: category_id\n\nFOREIGN_KEYS: none\n\nCOLUMNS: category_id, category_name, parent_category_id, category_level, description, created_at\n\nUSE_CASES: Filter products by category, category breakdown, sales by department"
+      }
+    },
+    {
+      "chunk_id": "col_categories_category_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "categories",
+      "column_name": "category_id",
+      "text": "COLUMN: categories.category_id\n\nDESCRIPTION: Primary key. Unique category identifier.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: categories",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "categories",
+        "column": "category_id",
+        "type": "INTEGER",
+        "is_pk": true,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: categories.category_id\n\nDESCRIPTION: Primary key. Unique category identifier.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: categories"
+      }
+    },
+    {
+      "chunk_id": "col_categories_category_name",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "categories",
+      "column_name": "category_name",
+      "text": "COLUMN: categories.category_name\n\nDESCRIPTION: Name of the category e.g. Electronics, Clothing, Sports.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: categories",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "categories",
+        "column": "category_name",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: categories.category_name\n\nDESCRIPTION: Name of the category e.g. Electronics, Clothing, Sports.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: categories"
+      }
+    },
+    {
+      "chunk_id": "col_categories_parent_category_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "categories",
+      "column_name": "parent_category_id",
+      "text": "COLUMN: categories.parent_category_id\n\nDESCRIPTION: Self-referencing FK \u2192 categories.category_id. NULL means top-level category.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: categories",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "categories",
+        "column": "parent_category_id",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": true,
+        "sample_values": [],
+        "text": "COLUMN: categories.parent_category_id\n\nDESCRIPTION: Self-referencing FK \u2192 categories.category_id. NULL means top-level category.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: categories"
+      }
+    },
+    {
+      "chunk_id": "col_categories_category_level",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "categories",
+      "column_name": "category_level",
+      "text": "COLUMN: categories.category_level\n\nDESCRIPTION: Depth in hierarchy. 1 = top level, 2 = subcategory.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: categories",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "categories",
+        "column": "category_level",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: categories.category_level\n\nDESCRIPTION: Depth in hierarchy. 1 = top level, 2 = subcategory.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: categories"
+      }
+    },
+    {
+      "chunk_id": "col_categories_description",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "categories",
+      "column_name": "description",
+      "text": "COLUMN: categories.description\n\nDESCRIPTION: Human-readable description of the category.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: categories",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "categories",
+        "column": "description",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: categories.description\n\nDESCRIPTION: Human-readable description of the category.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: categories"
+      }
+    },
+    {
+      "chunk_id": "col_categories_created_at",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "categories",
+      "column_name": "created_at",
+      "text": "COLUMN: categories.created_at\n\nDESCRIPTION: When this category was created.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: categories",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "categories",
+        "column": "created_at",
+        "type": "TIMESTAMP",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: categories.created_at\n\nDESCRIPTION: When this category was created.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: categories"
+      }
+    }
+  ]
+}

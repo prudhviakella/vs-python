@@ -1,0 +1,196 @@
+{
+  "table": "inventory",
+  "description": "Stock levels per product per warehouse. Tracks available and reserved quantities.",
+  "total_chunks": 10,
+  "chunks": [
+    {
+      "chunk_id": "tbl_inventory_overview",
+      "chunk_type": "table_overview",
+      "entity_type": "table",
+      "table_name": "inventory",
+      "text": "TABLE: inventory\n\nDESCRIPTION: Stock levels per product per warehouse. Tracks available and reserved quantities.\n\nNATURAL_LANGUAGE_TERMS: inventory, stock, stock levels, available quantity, warehouse stock, product availability, stock check\n\nPRIMARY_KEY: inventory_id\n\nFOREIGN_KEYS: product_id \u2192 products.product_id, warehouse_id \u2192 warehouses.warehouse_id\n\nCOLUMNS: inventory_id, product_id, warehouse_id, quantity_available, quantity_reserved, reorder_point, last_restock_date, last_stock_check, bin_location\n\nUSE_CASES: Stock availability, low stock alerts, warehouse inventory, reorder planning",
+      "metadata": {
+        "chunk_type": "table_overview",
+        "entity": "table",
+        "table": "inventory",
+        "pk": "inventory_id",
+        "fks": [
+          "product_id \u2192 products.product_id",
+          "warehouse_id \u2192 warehouses.warehouse_id"
+        ],
+        "text": "TABLE: inventory\n\nDESCRIPTION: Stock levels per product per warehouse. Tracks available and reserved quantities.\n\nNATURAL_LANGUAGE_TERMS: inventory, stock, stock levels, available quantity, warehouse stock, product availability, stock check\n\nPRIMARY_KEY: inventory_id\n\nFOREIGN_KEYS: product_id \u2192 products.product_id, warehouse_id \u2192 warehouses.warehouse_id\n\nCOLUMNS: inventory_id, product_id, warehouse_id, quantity_available, quantity_reserved, reorder_point, last_restock_date, last_stock_check, bin_location\n\nUSE_CASES: Stock availability, low stock alerts, warehouse inventory, reorder planning"
+      }
+    },
+    {
+      "chunk_id": "col_inventory_inventory_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "inventory",
+      "column_name": "inventory_id",
+      "text": "COLUMN: inventory.inventory_id\n\nDESCRIPTION: Primary key.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: inventory",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "inventory",
+        "column": "inventory_id",
+        "type": "INTEGER",
+        "is_pk": true,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: inventory.inventory_id\n\nDESCRIPTION: Primary key.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: inventory"
+      }
+    },
+    {
+      "chunk_id": "col_inventory_product_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "inventory",
+      "column_name": "product_id",
+      "text": "COLUMN: inventory.product_id\n\nDESCRIPTION: FK \u2192 products.product_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: inventory",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "inventory",
+        "column": "product_id",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": true,
+        "sample_values": [],
+        "text": "COLUMN: inventory.product_id\n\nDESCRIPTION: FK \u2192 products.product_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: inventory"
+      }
+    },
+    {
+      "chunk_id": "col_inventory_warehouse_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "inventory",
+      "column_name": "warehouse_id",
+      "text": "COLUMN: inventory.warehouse_id\n\nDESCRIPTION: FK \u2192 warehouses.warehouse_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: inventory",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "inventory",
+        "column": "warehouse_id",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": true,
+        "sample_values": [],
+        "text": "COLUMN: inventory.warehouse_id\n\nDESCRIPTION: FK \u2192 warehouses.warehouse_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: inventory"
+      }
+    },
+    {
+      "chunk_id": "col_inventory_quantity_available",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "inventory",
+      "column_name": "quantity_available",
+      "text": "COLUMN: inventory.quantity_available\n\nDESCRIPTION: Units currently available to sell.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: inventory",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "inventory",
+        "column": "quantity_available",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: inventory.quantity_available\n\nDESCRIPTION: Units currently available to sell.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: inventory"
+      }
+    },
+    {
+      "chunk_id": "col_inventory_quantity_reserved",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "inventory",
+      "column_name": "quantity_reserved",
+      "text": "COLUMN: inventory.quantity_reserved\n\nDESCRIPTION: Units reserved for pending orders.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: inventory",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "inventory",
+        "column": "quantity_reserved",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: inventory.quantity_reserved\n\nDESCRIPTION: Units reserved for pending orders.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: inventory"
+      }
+    },
+    {
+      "chunk_id": "col_inventory_reorder_point",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "inventory",
+      "column_name": "reorder_point",
+      "text": "COLUMN: inventory.reorder_point\n\nDESCRIPTION: Trigger restock when quantity_available falls below this.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: inventory",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "inventory",
+        "column": "reorder_point",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: inventory.reorder_point\n\nDESCRIPTION: Trigger restock when quantity_available falls below this.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: inventory"
+      }
+    },
+    {
+      "chunk_id": "col_inventory_last_restock_date",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "inventory",
+      "column_name": "last_restock_date",
+      "text": "COLUMN: inventory.last_restock_date\n\nDESCRIPTION: When stock was last replenished.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: inventory",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "inventory",
+        "column": "last_restock_date",
+        "type": "TIMESTAMP",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: inventory.last_restock_date\n\nDESCRIPTION: When stock was last replenished.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: inventory"
+      }
+    },
+    {
+      "chunk_id": "col_inventory_last_stock_check",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "inventory",
+      "column_name": "last_stock_check",
+      "text": "COLUMN: inventory.last_stock_check\n\nDESCRIPTION: When inventory was last verified.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: inventory",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "inventory",
+        "column": "last_stock_check",
+        "type": "TIMESTAMP",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: inventory.last_stock_check\n\nDESCRIPTION: When inventory was last verified.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: inventory"
+      }
+    },
+    {
+      "chunk_id": "col_inventory_bin_location",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "inventory",
+      "column_name": "bin_location",
+      "text": "COLUMN: inventory.bin_location\n\nDESCRIPTION: Physical bin/shelf location in warehouse.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: inventory",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "inventory",
+        "column": "bin_location",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: inventory.bin_location\n\nDESCRIPTION: Physical bin/shelf location in warehouse.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: inventory"
+      }
+    }
+  ]
+}

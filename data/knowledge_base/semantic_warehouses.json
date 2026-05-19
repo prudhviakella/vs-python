@@ -1,0 +1,258 @@
+{
+  "table": "warehouses",
+  "description": "Warehouse locations. Name column is warehouse_name, not name.",
+  "total_chunks": 13,
+  "chunks": [
+    {
+      "chunk_id": "tbl_warehouses_overview",
+      "chunk_type": "table_overview",
+      "entity_type": "table",
+      "table_name": "warehouses",
+      "text": "TABLE: warehouses\n\nDESCRIPTION: Warehouse locations. Name column is warehouse_name, not name.\n\nNATURAL_LANGUAGE_TERMS: warehouses, fulfillment centers, storage locations, distribution centers, depots\n\nPRIMARY_KEY: warehouse_id\n\nFOREIGN_KEYS: none\n\nCOLUMNS: warehouse_id, warehouse_name, address, city, state, zip_code, country, phone, email, capacity_sqft, manager_name, operating_since\n\nUSE_CASES: Warehouse capacity, inventory by warehouse, fulfillment location analysis",
+      "metadata": {
+        "chunk_type": "table_overview",
+        "entity": "table",
+        "table": "warehouses",
+        "pk": "warehouse_id",
+        "fks": [],
+        "text": "TABLE: warehouses\n\nDESCRIPTION: Warehouse locations. Name column is warehouse_name, not name.\n\nNATURAL_LANGUAGE_TERMS: warehouses, fulfillment centers, storage locations, distribution centers, depots\n\nPRIMARY_KEY: warehouse_id\n\nFOREIGN_KEYS: none\n\nCOLUMNS: warehouse_id, warehouse_name, address, city, state, zip_code, country, phone, email, capacity_sqft, manager_name, operating_since\n\nUSE_CASES: Warehouse capacity, inventory by warehouse, fulfillment location analysis"
+      }
+    },
+    {
+      "chunk_id": "col_warehouses_warehouse_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "warehouses",
+      "column_name": "warehouse_id",
+      "text": "COLUMN: warehouses.warehouse_id\n\nDESCRIPTION: Primary key.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: warehouses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "warehouses",
+        "column": "warehouse_id",
+        "type": "INTEGER",
+        "is_pk": true,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: warehouses.warehouse_id\n\nDESCRIPTION: Primary key.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: warehouses"
+      }
+    },
+    {
+      "chunk_id": "col_warehouses_warehouse_name",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "warehouses",
+      "column_name": "warehouse_name",
+      "text": "COLUMN: warehouses.warehouse_name\n\nDESCRIPTION: Name of the warehouse. Column is warehouse_name \u2014 NOT name.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "warehouses",
+        "column": "warehouse_name",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: warehouses.warehouse_name\n\nDESCRIPTION: Name of the warehouse. Column is warehouse_name \u2014 NOT name.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses"
+      }
+    },
+    {
+      "chunk_id": "col_warehouses_address",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "warehouses",
+      "column_name": "address",
+      "text": "COLUMN: warehouses.address\n\nDESCRIPTION: Street address.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "warehouses",
+        "column": "address",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: warehouses.address\n\nDESCRIPTION: Street address.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses"
+      }
+    },
+    {
+      "chunk_id": "col_warehouses_city",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "warehouses",
+      "column_name": "city",
+      "text": "COLUMN: warehouses.city\n\nDESCRIPTION: City.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "warehouses",
+        "column": "city",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: warehouses.city\n\nDESCRIPTION: City.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses"
+      }
+    },
+    {
+      "chunk_id": "col_warehouses_state",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "warehouses",
+      "column_name": "state",
+      "text": "COLUMN: warehouses.state\n\nDESCRIPTION: State.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses\n\nVALID VALUES: 'CA', 'IL', 'NJ', 'TX', 'WA'",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "warehouses",
+        "column": "state",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [
+          "CA",
+          "IL",
+          "NJ",
+          "TX",
+          "WA"
+        ],
+        "text": "COLUMN: warehouses.state\n\nDESCRIPTION: State.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses\n\nVALID VALUES: 'CA', 'IL', 'NJ', 'TX', 'WA'"
+      }
+    },
+    {
+      "chunk_id": "col_warehouses_zip_code",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "warehouses",
+      "column_name": "zip_code",
+      "text": "COLUMN: warehouses.zip_code\n\nDESCRIPTION: Zip code.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "warehouses",
+        "column": "zip_code",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: warehouses.zip_code\n\nDESCRIPTION: Zip code.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses"
+      }
+    },
+    {
+      "chunk_id": "col_warehouses_country",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "warehouses",
+      "column_name": "country",
+      "text": "COLUMN: warehouses.country\n\nDESCRIPTION: Country.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses\n\nVALID VALUES: 'USA'",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "warehouses",
+        "column": "country",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [
+          "USA"
+        ],
+        "text": "COLUMN: warehouses.country\n\nDESCRIPTION: Country.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses\n\nVALID VALUES: 'USA'"
+      }
+    },
+    {
+      "chunk_id": "col_warehouses_phone",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "warehouses",
+      "column_name": "phone",
+      "text": "COLUMN: warehouses.phone\n\nDESCRIPTION: Phone number.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "warehouses",
+        "column": "phone",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: warehouses.phone\n\nDESCRIPTION: Phone number.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses"
+      }
+    },
+    {
+      "chunk_id": "col_warehouses_email",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "warehouses",
+      "column_name": "email",
+      "text": "COLUMN: warehouses.email\n\nDESCRIPTION: Email contact.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "warehouses",
+        "column": "email",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: warehouses.email\n\nDESCRIPTION: Email contact.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses"
+      }
+    },
+    {
+      "chunk_id": "col_warehouses_capacity_sqft",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "warehouses",
+      "column_name": "capacity_sqft",
+      "text": "COLUMN: warehouses.capacity_sqft\n\nDESCRIPTION: Storage capacity in square feet.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "warehouses",
+        "column": "capacity_sqft",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: warehouses.capacity_sqft\n\nDESCRIPTION: Storage capacity in square feet.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses"
+      }
+    },
+    {
+      "chunk_id": "col_warehouses_manager_name",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "warehouses",
+      "column_name": "manager_name",
+      "text": "COLUMN: warehouses.manager_name\n\nDESCRIPTION: Name of warehouse manager.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "warehouses",
+        "column": "manager_name",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: warehouses.manager_name\n\nDESCRIPTION: Name of warehouse manager.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses"
+      }
+    },
+    {
+      "chunk_id": "col_warehouses_operating_since",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "warehouses",
+      "column_name": "operating_since",
+      "text": "COLUMN: warehouses.operating_since\n\nDESCRIPTION: When warehouse became operational.\n\nDATA_TYPE: DATE\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "warehouses",
+        "column": "operating_since",
+        "type": "DATE",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: warehouses.operating_since\n\nDESCRIPTION: When warehouse became operational.\n\nDATA_TYPE: DATE\n\nCONSTRAINTS: NULLABLE\n\nTABLE: warehouses"
+      }
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "table": "shipments",
+  "description": "Shipment tracking records per order. Table name is shipments, not shipping.",
+  "total_chunks": 12,
+  "chunks": [
+    {
+      "chunk_id": "tbl_shipments_overview",
+      "chunk_type": "table_overview",
+      "entity_type": "table",
+      "table_name": "shipments",
+      "text": "TABLE: shipments\n\nDESCRIPTION: Shipment tracking records per order. Table name is shipments, not shipping.\n\nNATURAL_LANGUAGE_TERMS: shipments, shipping, deliveries, tracking, packages, dispatch, shipped orders\n\nPRIMARY_KEY: shipment_id\n\nFOREIGN_KEYS: order_id \u2192 orders.order_id, warehouse_id \u2192 warehouses.warehouse_id\n\nCOLUMNS: shipment_id, order_id, warehouse_id, carrier, tracking_number, ship_date, estimated_delivery, actual_delivery, shipping_cost, weight_lbs, status\n\nUSE_CASES: Delivery status, shipping performance, carrier analysis, late deliveries",
+      "metadata": {
+        "chunk_type": "table_overview",
+        "entity": "table",
+        "table": "shipments",
+        "pk": "shipment_id",
+        "fks": [
+          "order_id \u2192 orders.order_id",
+          "warehouse_id \u2192 warehouses.warehouse_id"
+        ],
+        "text": "TABLE: shipments\n\nDESCRIPTION: Shipment tracking records per order. Table name is shipments, not shipping.\n\nNATURAL_LANGUAGE_TERMS: shipments, shipping, deliveries, tracking, packages, dispatch, shipped orders\n\nPRIMARY_KEY: shipment_id\n\nFOREIGN_KEYS: order_id \u2192 orders.order_id, warehouse_id \u2192 warehouses.warehouse_id\n\nCOLUMNS: shipment_id, order_id, warehouse_id, carrier, tracking_number, ship_date, estimated_delivery, actual_delivery, shipping_cost, weight_lbs, status\n\nUSE_CASES: Delivery status, shipping performance, carrier analysis, late deliveries"
+      }
+    },
+    {
+      "chunk_id": "col_shipments_shipment_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "shipments",
+      "column_name": "shipment_id",
+      "text": "COLUMN: shipments.shipment_id\n\nDESCRIPTION: Primary key.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: shipments",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "shipments",
+        "column": "shipment_id",
+        "type": "INTEGER",
+        "is_pk": true,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: shipments.shipment_id\n\nDESCRIPTION: Primary key.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: shipments"
+      }
+    },
+    {
+      "chunk_id": "col_shipments_order_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "shipments",
+      "column_name": "order_id",
+      "text": "COLUMN: shipments.order_id\n\nDESCRIPTION: FK \u2192 orders.order_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: shipments",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "shipments",
+        "column": "order_id",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": true,
+        "sample_values": [],
+        "text": "COLUMN: shipments.order_id\n\nDESCRIPTION: FK \u2192 orders.order_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: shipments"
+      }
+    },
+    {
+      "chunk_id": "col_shipments_warehouse_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "shipments",
+      "column_name": "warehouse_id",
+      "text": "COLUMN: shipments.warehouse_id\n\nDESCRIPTION: FK \u2192 warehouses.warehouse_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: shipments",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "shipments",
+        "column": "warehouse_id",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": true,
+        "sample_values": [],
+        "text": "COLUMN: shipments.warehouse_id\n\nDESCRIPTION: FK \u2192 warehouses.warehouse_id.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: FOREIGN KEY NULLABLE\n\nTABLE: shipments"
+      }
+    },
+    {
+      "chunk_id": "col_shipments_carrier",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "shipments",
+      "column_name": "carrier",
+      "text": "COLUMN: shipments.carrier\n\nDESCRIPTION: Shipping carrier.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: shipments\n\nVALID VALUES: 'DHL', 'FedEx', 'OnTrac', 'UPS', 'USPS'",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "shipments",
+        "column": "carrier",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [
+          "DHL",
+          "FedEx",
+          "OnTrac",
+          "UPS",
+          "USPS"
+        ],
+        "text": "COLUMN: shipments.carrier\n\nDESCRIPTION: Shipping carrier.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: shipments\n\nVALID VALUES: 'DHL', 'FedEx', 'OnTrac', 'UPS', 'USPS'"
+      }
+    },
+    {
+      "chunk_id": "col_shipments_tracking_number",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "shipments",
+      "column_name": "tracking_number",
+      "text": "COLUMN: shipments.tracking_number\n\nDESCRIPTION: Carrier tracking number.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: shipments",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "shipments",
+        "column": "tracking_number",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: shipments.tracking_number\n\nDESCRIPTION: Carrier tracking number.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: shipments"
+      }
+    },
+    {
+      "chunk_id": "col_shipments_ship_date",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "shipments",
+      "column_name": "ship_date",
+      "text": "COLUMN: shipments.ship_date\n\nDESCRIPTION: When package was dispatched.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: shipments",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "shipments",
+        "column": "ship_date",
+        "type": "TIMESTAMP",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: shipments.ship_date\n\nDESCRIPTION: When package was dispatched.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: shipments"
+      }
+    },
+    {
+      "chunk_id": "col_shipments_estimated_delivery",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "shipments",
+      "column_name": "estimated_delivery",
+      "text": "COLUMN: shipments.estimated_delivery\n\nDESCRIPTION: Expected delivery date.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: shipments",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "shipments",
+        "column": "estimated_delivery",
+        "type": "TIMESTAMP",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: shipments.estimated_delivery\n\nDESCRIPTION: Expected delivery date.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: shipments"
+      }
+    },
+    {
+      "chunk_id": "col_shipments_actual_delivery",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "shipments",
+      "column_name": "actual_delivery",
+      "text": "COLUMN: shipments.actual_delivery\n\nDESCRIPTION: Actual delivery date. NULL if not yet delivered.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: shipments",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "shipments",
+        "column": "actual_delivery",
+        "type": "TIMESTAMP",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: shipments.actual_delivery\n\nDESCRIPTION: Actual delivery date. NULL if not yet delivered.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: shipments"
+      }
+    },
+    {
+      "chunk_id": "col_shipments_shipping_cost",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "shipments",
+      "column_name": "shipping_cost",
+      "text": "COLUMN: shipments.shipping_cost\n\nDESCRIPTION: Cost of shipping.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: shipments",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "shipments",
+        "column": "shipping_cost",
+        "type": "NUMERIC",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: shipments.shipping_cost\n\nDESCRIPTION: Cost of shipping.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: shipments"
+      }
+    },
+    {
+      "chunk_id": "col_shipments_weight_lbs",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "shipments",
+      "column_name": "weight_lbs",
+      "text": "COLUMN: shipments.weight_lbs\n\nDESCRIPTION: Package weight in pounds.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: shipments",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "shipments",
+        "column": "weight_lbs",
+        "type": "NUMERIC",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: shipments.weight_lbs\n\nDESCRIPTION: Package weight in pounds.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: shipments"
+      }
+    },
+    {
+      "chunk_id": "col_shipments_status",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "shipments",
+      "column_name": "status",
+      "text": "COLUMN: shipments.status\n\nDESCRIPTION: Shipment status.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: shipments\n\nVALID VALUES: 'Delivered', 'In Transit', 'Returned'",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "shipments",
+        "column": "status",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [
+          "Delivered",
+          "In Transit",
+          "Returned"
+        ],
+        "text": "COLUMN: shipments.status\n\nDESCRIPTION: Shipment status.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: shipments\n\nVALID VALUES: 'Delivered', 'In Transit', 'Returned'"
+      }
+    }
+  ]
+}

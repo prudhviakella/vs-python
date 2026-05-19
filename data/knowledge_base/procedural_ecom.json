@@ -1,0 +1,290 @@
+{
+  "description": "Relationships and query examples for ecom database",
+  "total_chunks": 22,
+  "chunks": [
+    {
+      "chunk_id": "rel_order_items_orders",
+      "chunk_type": "relationship",
+      "text": "RELATIONSHIP: order_items.order_id \u2192 orders.order_id\n\nDESCRIPTION: Each order has multiple line items\n\nJOIN_CONDITION: order_items.order_id = orders.order_id\n\nSQL_PATTERN: JOIN orders ON order_items.order_id = orders.order_id",
+      "metadata": {
+        "chunk_type": "relationship",
+        "entity": "relationship",
+        "source_table": "order_items",
+        "source_column": "order_id",
+        "target_table": "orders",
+        "target_column": "order_id",
+        "text": "RELATIONSHIP: order_items.order_id \u2192 orders.order_id\n\nDESCRIPTION: Each order has multiple line items\n\nJOIN_CONDITION: order_items.order_id = orders.order_id\n\nSQL_PATTERN: JOIN orders ON order_items.order_id = orders.order_id"
+      }
+    },
+    {
+      "chunk_id": "rel_order_items_products",
+      "chunk_type": "relationship",
+      "text": "RELATIONSHIP: order_items.product_id \u2192 products.product_id\n\nDESCRIPTION: Each line item references a product\n\nJOIN_CONDITION: order_items.product_id = products.product_id\n\nSQL_PATTERN: JOIN products ON order_items.product_id = products.product_id",
+      "metadata": {
+        "chunk_type": "relationship",
+        "entity": "relationship",
+        "source_table": "order_items",
+        "source_column": "product_id",
+        "target_table": "products",
+        "target_column": "product_id",
+        "text": "RELATIONSHIP: order_items.product_id \u2192 products.product_id\n\nDESCRIPTION: Each line item references a product\n\nJOIN_CONDITION: order_items.product_id = products.product_id\n\nSQL_PATTERN: JOIN products ON order_items.product_id = products.product_id"
+      }
+    },
+    {
+      "chunk_id": "rel_orders_customers",
+      "chunk_type": "relationship",
+      "text": "RELATIONSHIP: orders.customer_id \u2192 customers.customer_id\n\nDESCRIPTION: Each order belongs to a customer\n\nJOIN_CONDITION: orders.customer_id = customers.customer_id\n\nSQL_PATTERN: JOIN customers ON orders.customer_id = customers.customer_id",
+      "metadata": {
+        "chunk_type": "relationship",
+        "entity": "relationship",
+        "source_table": "orders",
+        "source_column": "customer_id",
+        "target_table": "customers",
+        "target_column": "customer_id",
+        "text": "RELATIONSHIP: orders.customer_id \u2192 customers.customer_id\n\nDESCRIPTION: Each order belongs to a customer\n\nJOIN_CONDITION: orders.customer_id = customers.customer_id\n\nSQL_PATTERN: JOIN customers ON orders.customer_id = customers.customer_id"
+      }
+    },
+    {
+      "chunk_id": "rel_inventory_products",
+      "chunk_type": "relationship",
+      "text": "RELATIONSHIP: inventory.product_id \u2192 products.product_id\n\nDESCRIPTION: Stock levels tracked per product\n\nJOIN_CONDITION: inventory.product_id = products.product_id\n\nSQL_PATTERN: JOIN products ON inventory.product_id = products.product_id",
+      "metadata": {
+        "chunk_type": "relationship",
+        "entity": "relationship",
+        "source_table": "inventory",
+        "source_column": "product_id",
+        "target_table": "products",
+        "target_column": "product_id",
+        "text": "RELATIONSHIP: inventory.product_id \u2192 products.product_id\n\nDESCRIPTION: Stock levels tracked per product\n\nJOIN_CONDITION: inventory.product_id = products.product_id\n\nSQL_PATTERN: JOIN products ON inventory.product_id = products.product_id"
+      }
+    },
+    {
+      "chunk_id": "rel_inventory_warehouses",
+      "chunk_type": "relationship",
+      "text": "RELATIONSHIP: inventory.warehouse_id \u2192 warehouses.warehouse_id\n\nDESCRIPTION: Stock levels tracked per warehouse\n\nJOIN_CONDITION: inventory.warehouse_id = warehouses.warehouse_id\n\nSQL_PATTERN: JOIN warehouses ON inventory.warehouse_id = warehouses.warehouse_id",
+      "metadata": {
+        "chunk_type": "relationship",
+        "entity": "relationship",
+        "source_table": "inventory",
+        "source_column": "warehouse_id",
+        "target_table": "warehouses",
+        "target_column": "warehouse_id",
+        "text": "RELATIONSHIP: inventory.warehouse_id \u2192 warehouses.warehouse_id\n\nDESCRIPTION: Stock levels tracked per warehouse\n\nJOIN_CONDITION: inventory.warehouse_id = warehouses.warehouse_id\n\nSQL_PATTERN: JOIN warehouses ON inventory.warehouse_id = warehouses.warehouse_id"
+      }
+    },
+    {
+      "chunk_id": "rel_shipments_orders",
+      "chunk_type": "relationship",
+      "text": "RELATIONSHIP: shipments.order_id \u2192 orders.order_id\n\nDESCRIPTION: Each order may have one or more shipments\n\nJOIN_CONDITION: shipments.order_id = orders.order_id\n\nSQL_PATTERN: JOIN orders ON shipments.order_id = orders.order_id",
+      "metadata": {
+        "chunk_type": "relationship",
+        "entity": "relationship",
+        "source_table": "shipments",
+        "source_column": "order_id",
+        "target_table": "orders",
+        "target_column": "order_id",
+        "text": "RELATIONSHIP: shipments.order_id \u2192 orders.order_id\n\nDESCRIPTION: Each order may have one or more shipments\n\nJOIN_CONDITION: shipments.order_id = orders.order_id\n\nSQL_PATTERN: JOIN orders ON shipments.order_id = orders.order_id"
+      }
+    },
+    {
+      "chunk_id": "rel_shipments_warehouses",
+      "chunk_type": "relationship",
+      "text": "RELATIONSHIP: shipments.warehouse_id \u2192 warehouses.warehouse_id\n\nDESCRIPTION: Shipment fulfilled from a warehouse\n\nJOIN_CONDITION: shipments.warehouse_id = warehouses.warehouse_id\n\nSQL_PATTERN: JOIN warehouses ON shipments.warehouse_id = warehouses.warehouse_id",
+      "metadata": {
+        "chunk_type": "relationship",
+        "entity": "relationship",
+        "source_table": "shipments",
+        "source_column": "warehouse_id",
+        "target_table": "warehouses",
+        "target_column": "warehouse_id",
+        "text": "RELATIONSHIP: shipments.warehouse_id \u2192 warehouses.warehouse_id\n\nDESCRIPTION: Shipment fulfilled from a warehouse\n\nJOIN_CONDITION: shipments.warehouse_id = warehouses.warehouse_id\n\nSQL_PATTERN: JOIN warehouses ON shipments.warehouse_id = warehouses.warehouse_id"
+      }
+    },
+    {
+      "chunk_id": "rel_payment_transactions_orders",
+      "chunk_type": "relationship",
+      "text": "RELATIONSHIP: payment_transactions.order_id \u2192 orders.order_id\n\nDESCRIPTION: Each order has payment records\n\nJOIN_CONDITION: payment_transactions.order_id = orders.order_id\n\nSQL_PATTERN: JOIN orders ON payment_transactions.order_id = orders.order_id",
+      "metadata": {
+        "chunk_type": "relationship",
+        "entity": "relationship",
+        "source_table": "payment_transactions",
+        "source_column": "order_id",
+        "target_table": "orders",
+        "target_column": "order_id",
+        "text": "RELATIONSHIP: payment_transactions.order_id \u2192 orders.order_id\n\nDESCRIPTION: Each order has payment records\n\nJOIN_CONDITION: payment_transactions.order_id = orders.order_id\n\nSQL_PATTERN: JOIN orders ON payment_transactions.order_id = orders.order_id"
+      }
+    },
+    {
+      "chunk_id": "rel_reviews_products",
+      "chunk_type": "relationship",
+      "text": "RELATIONSHIP: reviews.product_id \u2192 products.product_id\n\nDESCRIPTION: Reviews belong to a product\n\nJOIN_CONDITION: reviews.product_id = products.product_id\n\nSQL_PATTERN: JOIN products ON reviews.product_id = products.product_id",
+      "metadata": {
+        "chunk_type": "relationship",
+        "entity": "relationship",
+        "source_table": "reviews",
+        "source_column": "product_id",
+        "target_table": "products",
+        "target_column": "product_id",
+        "text": "RELATIONSHIP: reviews.product_id \u2192 products.product_id\n\nDESCRIPTION: Reviews belong to a product\n\nJOIN_CONDITION: reviews.product_id = products.product_id\n\nSQL_PATTERN: JOIN products ON reviews.product_id = products.product_id"
+      }
+    },
+    {
+      "chunk_id": "rel_reviews_customers",
+      "chunk_type": "relationship",
+      "text": "RELATIONSHIP: reviews.customer_id \u2192 customers.customer_id\n\nDESCRIPTION: Reviews submitted by customers\n\nJOIN_CONDITION: reviews.customer_id = customers.customer_id\n\nSQL_PATTERN: JOIN customers ON reviews.customer_id = customers.customer_id",
+      "metadata": {
+        "chunk_type": "relationship",
+        "entity": "relationship",
+        "source_table": "reviews",
+        "source_column": "customer_id",
+        "target_table": "customers",
+        "target_column": "customer_id",
+        "text": "RELATIONSHIP: reviews.customer_id \u2192 customers.customer_id\n\nDESCRIPTION: Reviews submitted by customers\n\nJOIN_CONDITION: reviews.customer_id = customers.customer_id\n\nSQL_PATTERN: JOIN customers ON reviews.customer_id = customers.customer_id"
+      }
+    },
+    {
+      "chunk_id": "rel_product_suppliers_products",
+      "chunk_type": "relationship",
+      "text": "RELATIONSHIP: product_suppliers.product_id \u2192 products.product_id\n\nDESCRIPTION: Product sourcing links\n\nJOIN_CONDITION: product_suppliers.product_id = products.product_id\n\nSQL_PATTERN: JOIN products ON product_suppliers.product_id = products.product_id",
+      "metadata": {
+        "chunk_type": "relationship",
+        "entity": "relationship",
+        "source_table": "product_suppliers",
+        "source_column": "product_id",
+        "target_table": "products",
+        "target_column": "product_id",
+        "text": "RELATIONSHIP: product_suppliers.product_id \u2192 products.product_id\n\nDESCRIPTION: Product sourcing links\n\nJOIN_CONDITION: product_suppliers.product_id = products.product_id\n\nSQL_PATTERN: JOIN products ON product_suppliers.product_id = products.product_id"
+      }
+    },
+    {
+      "chunk_id": "rel_product_suppliers_suppliers",
+      "chunk_type": "relationship",
+      "text": "RELATIONSHIP: product_suppliers.supplier_id \u2192 suppliers.supplier_id\n\nDESCRIPTION: Supplier links\n\nJOIN_CONDITION: product_suppliers.supplier_id = suppliers.supplier_id\n\nSQL_PATTERN: JOIN suppliers ON product_suppliers.supplier_id = suppliers.supplier_id",
+      "metadata": {
+        "chunk_type": "relationship",
+        "entity": "relationship",
+        "source_table": "product_suppliers",
+        "source_column": "supplier_id",
+        "target_table": "suppliers",
+        "target_column": "supplier_id",
+        "text": "RELATIONSHIP: product_suppliers.supplier_id \u2192 suppliers.supplier_id\n\nDESCRIPTION: Supplier links\n\nJOIN_CONDITION: product_suppliers.supplier_id = suppliers.supplier_id\n\nSQL_PATTERN: JOIN suppliers ON product_suppliers.supplier_id = suppliers.supplier_id"
+      }
+    },
+    {
+      "chunk_id": "rel_customer_addresses_customers",
+      "chunk_type": "relationship",
+      "text": "RELATIONSHIP: customer_addresses.customer_id \u2192 customers.customer_id\n\nDESCRIPTION: Customer address book\n\nJOIN_CONDITION: customer_addresses.customer_id = customers.customer_id\n\nSQL_PATTERN: JOIN customers ON customer_addresses.customer_id = customers.customer_id",
+      "metadata": {
+        "chunk_type": "relationship",
+        "entity": "relationship",
+        "source_table": "customer_addresses",
+        "source_column": "customer_id",
+        "target_table": "customers",
+        "target_column": "customer_id",
+        "text": "RELATIONSHIP: customer_addresses.customer_id \u2192 customers.customer_id\n\nDESCRIPTION: Customer address book\n\nJOIN_CONDITION: customer_addresses.customer_id = customers.customer_id\n\nSQL_PATTERN: JOIN customers ON customer_addresses.customer_id = customers.customer_id"
+      }
+    },
+    {
+      "chunk_id": "rel_categories_categories",
+      "chunk_type": "relationship",
+      "text": "RELATIONSHIP: categories.parent_category_id \u2192 categories.category_id\n\nDESCRIPTION: Self-referencing: subcategory \u2192 parent category\n\nJOIN_CONDITION: categories.parent_category_id = categories.category_id\n\nSQL_PATTERN: JOIN categories ON categories.parent_category_id = categories.category_id",
+      "metadata": {
+        "chunk_type": "relationship",
+        "entity": "relationship",
+        "source_table": "categories",
+        "source_column": "parent_category_id",
+        "target_table": "categories",
+        "target_column": "category_id",
+        "text": "RELATIONSHIP: categories.parent_category_id \u2192 categories.category_id\n\nDESCRIPTION: Self-referencing: subcategory \u2192 parent category\n\nJOIN_CONDITION: categories.parent_category_id = categories.category_id\n\nSQL_PATTERN: JOIN categories ON categories.parent_category_id = categories.category_id"
+      }
+    },
+    {
+      "chunk_id": "qex_01",
+      "chunk_type": "query_example",
+      "text": "QUESTION: Top 5 products by revenue\n\nSQL:\nSELECT p.product_name, SUM(oi.total_price) AS revenue\nFROM order_items oi\nJOIN products p ON oi.product_id = p.product_id\nJOIN orders o ON oi.order_id = o.order_id\nWHERE o.order_status = 'Delivered'\nGROUP BY p.product_id, p.product_name\nORDER BY revenue DESC\nLIMIT 5\n\nNOTES: Revenue = SUM(total_price). No discount_percent in order_items. order_status valid values: 'Cancelled', 'Delivered', 'Processing', 'Returned', 'Shipped'.",
+      "metadata": {
+        "chunk_type": "query_example",
+        "entity": "query_example",
+        "question": "Top 5 products by revenue",
+        "text": "QUESTION: Top 5 products by revenue\n\nSQL:\nSELECT p.product_name, SUM(oi.total_price) AS revenue\nFROM order_items oi\nJOIN products p ON oi.product_id = p.product_id\nJOIN orders o ON oi.order_id = o.order_id\nWHERE o.order_status = 'Delivered'\nGROUP BY p.product_id, p.product_name\nORDER BY revenue DESC\nLIMIT 5\n\nNOTES: Revenue = SUM(total_price). No discount_percent in order_items. order_status valid values: 'Cancelled', 'Delivered', 'Processing', 'Returned', 'Shipped'."
+      }
+    },
+    {
+      "chunk_id": "qex_02",
+      "chunk_type": "query_example",
+      "text": "QUESTION: Revenue by product category\n\nSQL:\nSELECT p.category, SUM(oi.total_price) AS revenue\nFROM order_items oi\nJOIN products p ON oi.product_id = p.product_id\nJOIN orders o ON oi.order_id = o.order_id\nWHERE o.order_status = 'Delivered'\nGROUP BY p.category\nORDER BY revenue DESC\n\nNOTES: products.category is a plain text column, not a FK.",
+      "metadata": {
+        "chunk_type": "query_example",
+        "entity": "query_example",
+        "question": "Revenue by product category",
+        "text": "QUESTION: Revenue by product category\n\nSQL:\nSELECT p.category, SUM(oi.total_price) AS revenue\nFROM order_items oi\nJOIN products p ON oi.product_id = p.product_id\nJOIN orders o ON oi.order_id = o.order_id\nWHERE o.order_status = 'Delivered'\nGROUP BY p.category\nORDER BY revenue DESC\n\nNOTES: products.category is a plain text column, not a FK."
+      }
+    },
+    {
+      "chunk_id": "qex_03",
+      "chunk_type": "query_example",
+      "text": "QUESTION: Total revenue last 30 days\n\nSQL:\nSELECT SUM(oi.total_price) AS total_revenue\nFROM order_items oi\nJOIN orders o ON oi.order_id = o.order_id\nWHERE o.order_status = 'Delivered'\n  AND o.order_date >= NOW() - INTERVAL '30 days'\n\nNOTES: Date filter on orders.order_date. Status filter on orders.order_status.",
+      "metadata": {
+        "chunk_type": "query_example",
+        "entity": "query_example",
+        "question": "Total revenue last 30 days",
+        "text": "QUESTION: Total revenue last 30 days\n\nSQL:\nSELECT SUM(oi.total_price) AS total_revenue\nFROM order_items oi\nJOIN orders o ON oi.order_id = o.order_id\nWHERE o.order_status = 'Delivered'\n  AND o.order_date >= NOW() - INTERVAL '30 days'\n\nNOTES: Date filter on orders.order_date. Status filter on orders.order_status."
+      }
+    },
+    {
+      "chunk_id": "qex_04",
+      "chunk_type": "query_example",
+      "text": "QUESTION: Customer order history with spend\n\nSQL:\nSELECT c.first_name, c.last_name, COUNT(o.order_id) AS order_count,\n       SUM(o.total_amount) AS total_spent\nFROM customers c\nJOIN orders o ON c.customer_id = o.customer_id\nGROUP BY c.customer_id, c.first_name, c.last_name\nORDER BY total_spent DESC\n\nNOTES: customers uses customer_id, first_name, last_name \u2014 no single name column.",
+      "metadata": {
+        "chunk_type": "query_example",
+        "entity": "query_example",
+        "question": "Customer order history with spend",
+        "text": "QUESTION: Customer order history with spend\n\nSQL:\nSELECT c.first_name, c.last_name, COUNT(o.order_id) AS order_count,\n       SUM(o.total_amount) AS total_spent\nFROM customers c\nJOIN orders o ON c.customer_id = o.customer_id\nGROUP BY c.customer_id, c.first_name, c.last_name\nORDER BY total_spent DESC\n\nNOTES: customers uses customer_id, first_name, last_name \u2014 no single name column."
+      }
+    },
+    {
+      "chunk_id": "qex_05",
+      "chunk_type": "query_example",
+      "text": "QUESTION: Current stock levels by product\n\nSQL:\nSELECT p.product_name, i.quantity_available, w.warehouse_name\nFROM inventory i\nJOIN products p ON i.product_id = p.product_id\nJOIN warehouses w ON i.warehouse_id = w.warehouse_id\nORDER BY i.quantity_available ASC\n\nNOTES: Stock column is quantity_available. warehouses uses warehouse_name.",
+      "metadata": {
+        "chunk_type": "query_example",
+        "entity": "query_example",
+        "question": "Current stock levels by product",
+        "text": "QUESTION: Current stock levels by product\n\nSQL:\nSELECT p.product_name, i.quantity_available, w.warehouse_name\nFROM inventory i\nJOIN products p ON i.product_id = p.product_id\nJOIN warehouses w ON i.warehouse_id = w.warehouse_id\nORDER BY i.quantity_available ASC\n\nNOTES: Stock column is quantity_available. warehouses uses warehouse_name."
+      }
+    },
+    {
+      "chunk_id": "qex_06",
+      "chunk_type": "query_example",
+      "text": "QUESTION: Average product rating with review count\n\nSQL:\nSELECT p.product_name, ROUND(AVG(r.rating), 2) AS avg_rating,\n       COUNT(r.review_id) AS review_count\nFROM products p\nJOIN reviews r ON p.product_id = r.product_id\nGROUP BY p.product_id, p.product_name\nORDER BY avg_rating DESC\n\nNOTES: Table is reviews not product_reviews.",
+      "metadata": {
+        "chunk_type": "query_example",
+        "entity": "query_example",
+        "question": "Average product rating with review count",
+        "text": "QUESTION: Average product rating with review count\n\nSQL:\nSELECT p.product_name, ROUND(AVG(r.rating), 2) AS avg_rating,\n       COUNT(r.review_id) AS review_count\nFROM products p\nJOIN reviews r ON p.product_id = r.product_id\nGROUP BY p.product_id, p.product_name\nORDER BY avg_rating DESC\n\nNOTES: Table is reviews not product_reviews."
+      }
+    },
+    {
+      "chunk_id": "qex_07",
+      "chunk_type": "query_example",
+      "text": "QUESTION: Payment method breakdown by transaction count and amount\n\nSQL:\nSELECT payment_method, COUNT(*) AS transaction_count,\n       SUM(amount) AS total_amount\nFROM payment_transactions\nWHERE status = 'Completed'\nGROUP BY payment_method\nORDER BY total_amount DESC\n\nNOTES: Table is payment_transactions. payment_transactions.status valid values: 'Completed', 'Failed', 'Refunded'.",
+      "metadata": {
+        "chunk_type": "query_example",
+        "entity": "query_example",
+        "question": "Payment method breakdown by transaction count and amount",
+        "text": "QUESTION: Payment method breakdown by transaction count and amount\n\nSQL:\nSELECT payment_method, COUNT(*) AS transaction_count,\n       SUM(amount) AS total_amount\nFROM payment_transactions\nWHERE status = 'Completed'\nGROUP BY payment_method\nORDER BY total_amount DESC\n\nNOTES: Table is payment_transactions. payment_transactions.status valid values: 'Completed', 'Failed', 'Refunded'."
+      }
+    },
+    {
+      "chunk_id": "qex_08",
+      "chunk_type": "query_example",
+      "text": "QUESTION: Average delivery days by carrier\n\nSQL:\nSELECT carrier,\n       COUNT(*) AS total_shipments,\n       ROUND(AVG(EXTRACT(EPOCH FROM (actual_delivery - ship_date))/86400), 1) AS avg_days\nFROM shipments\nWHERE actual_delivery IS NOT NULL\nGROUP BY carrier\nORDER BY avg_days ASC\n\nNOTES: Table is shipments. Filter NULL actual_delivery before calculating.",
+      "metadata": {
+        "chunk_type": "query_example",
+        "entity": "query_example",
+        "question": "Average delivery days by carrier",
+        "text": "QUESTION: Average delivery days by carrier\n\nSQL:\nSELECT carrier,\n       COUNT(*) AS total_shipments,\n       ROUND(AVG(EXTRACT(EPOCH FROM (actual_delivery - ship_date))/86400), 1) AS avg_days\nFROM shipments\nWHERE actual_delivery IS NOT NULL\nGROUP BY carrier\nORDER BY avg_days ASC\n\nNOTES: Table is shipments. Filter NULL actual_delivery before calculating."
+      }
+    }
+  ]
+}

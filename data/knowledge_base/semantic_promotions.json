@@ -1,0 +1,278 @@
+{
+  "table": "promotions",
+  "description": "Promotional campaigns and discount codes.",
+  "total_chunks": 14,
+  "chunks": [
+    {
+      "chunk_id": "tbl_promotions_overview",
+      "chunk_type": "table_overview",
+      "entity_type": "table",
+      "table_name": "promotions",
+      "text": "TABLE: promotions\n\nDESCRIPTION: Promotional campaigns and discount codes.\n\nNATURAL_LANGUAGE_TERMS: promotions, discounts, promo codes, coupon codes, offers, deals, campaigns\n\nPRIMARY_KEY: promotion_id\n\nFOREIGN_KEYS: none\n\nCOLUMNS: promotion_id, promotion_name, promotion_type, discount_percent, discount_amount, start_date, end_date, promo_code, min_purchase_amount, max_discount, status, usage_limit, times_used\n\nUSE_CASES: Active promotions, discount analysis, promo code lookup, campaign performance",
+      "metadata": {
+        "chunk_type": "table_overview",
+        "entity": "table",
+        "table": "promotions",
+        "pk": "promotion_id",
+        "fks": [],
+        "text": "TABLE: promotions\n\nDESCRIPTION: Promotional campaigns and discount codes.\n\nNATURAL_LANGUAGE_TERMS: promotions, discounts, promo codes, coupon codes, offers, deals, campaigns\n\nPRIMARY_KEY: promotion_id\n\nFOREIGN_KEYS: none\n\nCOLUMNS: promotion_id, promotion_name, promotion_type, discount_percent, discount_amount, start_date, end_date, promo_code, min_purchase_amount, max_discount, status, usage_limit, times_used\n\nUSE_CASES: Active promotions, discount analysis, promo code lookup, campaign performance"
+      }
+    },
+    {
+      "chunk_id": "col_promotions_promotion_id",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "promotions",
+      "column_name": "promotion_id",
+      "text": "COLUMN: promotions.promotion_id\n\nDESCRIPTION: Primary key.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: promotions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "promotions",
+        "column": "promotion_id",
+        "type": "INTEGER",
+        "is_pk": true,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: promotions.promotion_id\n\nDESCRIPTION: Primary key.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: PRIMARY KEY NOT NULL\n\nTABLE: promotions"
+      }
+    },
+    {
+      "chunk_id": "col_promotions_promotion_name",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "promotions",
+      "column_name": "promotion_name",
+      "text": "COLUMN: promotions.promotion_name\n\nDESCRIPTION: Name of the promotion.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "promotions",
+        "column": "promotion_name",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: promotions.promotion_name\n\nDESCRIPTION: Name of the promotion.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions"
+      }
+    },
+    {
+      "chunk_id": "col_promotions_promotion_type",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "promotions",
+      "column_name": "promotion_type",
+      "text": "COLUMN: promotions.promotion_type\n\nDESCRIPTION: Type of discount.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions\n\nVALID VALUES: 'Buy One Get One', 'Fixed Amount', 'Free Shipping', 'Percentage'",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "promotions",
+        "column": "promotion_type",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [
+          "Buy One Get One",
+          "Fixed Amount",
+          "Free Shipping",
+          "Percentage"
+        ],
+        "text": "COLUMN: promotions.promotion_type\n\nDESCRIPTION: Type of discount.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions\n\nVALID VALUES: 'Buy One Get One', 'Fixed Amount', 'Free Shipping', 'Percentage'"
+      }
+    },
+    {
+      "chunk_id": "col_promotions_discount_percent",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "promotions",
+      "column_name": "discount_percent",
+      "text": "COLUMN: promotions.discount_percent\n\nDESCRIPTION: Percentage discount if type is percentage.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "promotions",
+        "column": "discount_percent",
+        "type": "NUMERIC",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: promotions.discount_percent\n\nDESCRIPTION: Percentage discount if type is percentage.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions"
+      }
+    },
+    {
+      "chunk_id": "col_promotions_discount_amount",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "promotions",
+      "column_name": "discount_amount",
+      "text": "COLUMN: promotions.discount_amount\n\nDESCRIPTION: Fixed discount amount if type is fixed.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "promotions",
+        "column": "discount_amount",
+        "type": "NUMERIC",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: promotions.discount_amount\n\nDESCRIPTION: Fixed discount amount if type is fixed.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions"
+      }
+    },
+    {
+      "chunk_id": "col_promotions_start_date",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "promotions",
+      "column_name": "start_date",
+      "text": "COLUMN: promotions.start_date\n\nDESCRIPTION: Promotion start date.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "promotions",
+        "column": "start_date",
+        "type": "TIMESTAMP",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: promotions.start_date\n\nDESCRIPTION: Promotion start date.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions"
+      }
+    },
+    {
+      "chunk_id": "col_promotions_end_date",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "promotions",
+      "column_name": "end_date",
+      "text": "COLUMN: promotions.end_date\n\nDESCRIPTION: Promotion end date.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "promotions",
+        "column": "end_date",
+        "type": "TIMESTAMP",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: promotions.end_date\n\nDESCRIPTION: Promotion end date.\n\nDATA_TYPE: TIMESTAMP\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions"
+      }
+    },
+    {
+      "chunk_id": "col_promotions_promo_code",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "promotions",
+      "column_name": "promo_code",
+      "text": "COLUMN: promotions.promo_code\n\nDESCRIPTION: Coupon code customers enter at checkout.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "promotions",
+        "column": "promo_code",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: promotions.promo_code\n\nDESCRIPTION: Coupon code customers enter at checkout.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions"
+      }
+    },
+    {
+      "chunk_id": "col_promotions_min_purchase_amount",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "promotions",
+      "column_name": "min_purchase_amount",
+      "text": "COLUMN: promotions.min_purchase_amount\n\nDESCRIPTION: Minimum order value to qualify.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "promotions",
+        "column": "min_purchase_amount",
+        "type": "NUMERIC",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: promotions.min_purchase_amount\n\nDESCRIPTION: Minimum order value to qualify.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions"
+      }
+    },
+    {
+      "chunk_id": "col_promotions_max_discount",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "promotions",
+      "column_name": "max_discount",
+      "text": "COLUMN: promotions.max_discount\n\nDESCRIPTION: Maximum discount cap.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "promotions",
+        "column": "max_discount",
+        "type": "NUMERIC",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: promotions.max_discount\n\nDESCRIPTION: Maximum discount cap.\n\nDATA_TYPE: NUMERIC\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions"
+      }
+    },
+    {
+      "chunk_id": "col_promotions_status",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "promotions",
+      "column_name": "status",
+      "text": "COLUMN: promotions.status\n\nDESCRIPTION: Promotion lifecycle status.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions\n\nVALID VALUES: 'Active', 'Expired', 'Scheduled'",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "promotions",
+        "column": "status",
+        "type": "TEXT",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [
+          "Active",
+          "Expired",
+          "Scheduled"
+        ],
+        "text": "COLUMN: promotions.status\n\nDESCRIPTION: Promotion lifecycle status.\n\nDATA_TYPE: TEXT\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions\n\nVALID VALUES: 'Active', 'Expired', 'Scheduled'"
+      }
+    },
+    {
+      "chunk_id": "col_promotions_usage_limit",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "promotions",
+      "column_name": "usage_limit",
+      "text": "COLUMN: promotions.usage_limit\n\nDESCRIPTION: Maximum number of times code can be used.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "promotions",
+        "column": "usage_limit",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: promotions.usage_limit\n\nDESCRIPTION: Maximum number of times code can be used.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions"
+      }
+    },
+    {
+      "chunk_id": "col_promotions_times_used",
+      "chunk_type": "column_detail",
+      "entity_type": "column",
+      "table_name": "promotions",
+      "column_name": "times_used",
+      "text": "COLUMN: promotions.times_used\n\nDESCRIPTION: How many times code has been redeemed.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions",
+      "metadata": {
+        "chunk_type": "column_detail",
+        "entity": "column",
+        "table": "promotions",
+        "column": "times_used",
+        "type": "INTEGER",
+        "is_pk": false,
+        "is_fk": false,
+        "sample_values": [],
+        "text": "COLUMN: promotions.times_used\n\nDESCRIPTION: How many times code has been redeemed.\n\nDATA_TYPE: INTEGER\n\nCONSTRAINTS: NULLABLE\n\nTABLE: promotions"
+      }
+    }
+  ]
+}
