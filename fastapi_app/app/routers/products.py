@@ -14,7 +14,7 @@ Mapping (REST verbs from Day 09):
   PUT    /products/{id}     -> update     (DB update)
   DELETE /products/{id}     -> remove     (DB delete)
 """
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, HTTPException, status, Header
 from .. import database as db
 from ..contracts import ProductIn, ProductUpdate, ProductOut
 
@@ -23,9 +23,19 @@ router = APIRouter(prefix="/products", tags=["Products"])
 
 
 @router.get("", response_model=list[ProductOut])
-def list_products(category: str | None = None):
+def list_products(category: str | None = None,x_api_key: str = Header(...)):
     """List products. Optional ?category= filter (a query parameter)."""
     return db.list_products(category)
+
+@router.post("", response_model=ProductOut, status_code=status.HTTP_201_CREATED)
+def create_product(product: ProductIn,x_api_key: str = Header(...)):
+    """
+    Create a product. The body is validated against ProductIn (the contract):
+    a missing field or price <= 0 is rejected automatically with 422.
+    Returns 201 Created with the new product (now carrying an id).
+    """
+    return db.insert_product(product.model_dump())
+
 
 
 @router.get("/{product_id}", response_model=ProductOut)
@@ -36,16 +46,6 @@ def get_product(product_id: int):
         # the resource doesn't exist -> 404 (your fault: asked for a missing id)
         raise HTTPException(status_code=404, detail=f"Product {product_id} not found")
     return row
-
-
-@router.post("", response_model=ProductOut, status_code=status.HTTP_201_CREATED)
-def create_product(product: ProductIn):
-    """
-    Create a product. The body is validated against ProductIn (the contract):
-    a missing field or price <= 0 is rejected automatically with 422.
-    Returns 201 Created with the new product (now carrying an id).
-    """
-    return db.insert_product(product.model_dump())
 
 
 @router.put("/{product_id}", response_model=ProductOut)
