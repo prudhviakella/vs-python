@@ -39,7 +39,7 @@ def create_product(product: ProductIn,x_api_key: str = Header(...)):
 
 
 @router.get("/{product_id}", response_model=ProductOut)
-def get_product(product_id: int):
+def get_product(product_id: int,x_api_key: str = Header(...)):
     """Get ONE product by id (a path parameter)."""
     row = db.get_product(product_id)
     if row is None:
@@ -49,7 +49,7 @@ def get_product(product_id: int):
 
 
 @router.put("/{product_id}", response_model=ProductOut)
-def update_product(product_id: int, changes: ProductUpdate):
+def update_product(product_id: int, changes: ProductUpdate,x_api_key: str = Header(...)):
     """Update an existing product. Only the fields sent are changed."""
     row = db.update_product(product_id, changes.model_dump())
     if row is None:
@@ -58,7 +58,7 @@ def update_product(product_id: int, changes: ProductUpdate):
 
 
 @router.delete("/{product_id}")
-def delete_product(product_id: int):
+def delete_product(product_id: int, x_api_key: str = Header(...)):
     """Delete a product. Returns a small status body."""
     if not db.delete_product(product_id):
         raise HTTPException(status_code=404, detail=f"Product {product_id} not found")
