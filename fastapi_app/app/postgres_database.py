@@ -46,19 +46,19 @@ except Exception as e:
 
 # ---------- products: the four basic operations (Day 08 CRUD) ----------
 def list_products(category: str | None = None) -> list[dict]:
-   pass
+    pass
 
 def get_product(product_id: int) -> dict | None:
     pass
 
 def insert_product(data: dict) -> dict:
-   pass
+    pass
 
 def update_product(product_id: int, changes: dict) -> dict | None:
-   pass
+    pass
 
 def delete_product(product_id: int) -> bool:
-   pass
+    pass
 
 
 # ---------- reviews (nested under a product) ----------
@@ -66,4 +66,4 @@ def get_reviews(product_id: int) -> list[dict]:
     pass
 
 async def add_review(product_id: int, review: dict) -> dict:
-   pass
+    pass
